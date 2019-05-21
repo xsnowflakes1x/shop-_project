@@ -1,0 +1,483 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+/*Ko để trùng code -> gây lỗi*/
+
+/*Fix lỗi menu bằng z-index*/
+/*.rank1-ul-menu {
+    z-index: 9999;    
+}*/
+
+
+.right-section {
+    box-sizing: border-box;
+ /*   height: 157px;*/
+    background-color: #f8f9fa;
+}
+ 
+.center-banner {
+    background-image: url("../image/banner.png");
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: 550px;
+    background-position-x: -28px;
+    background-position-y: -108px;
+}   
+
+/*Begin thêm hình cho phần right-section flexbox header*/
+.top-flex-containner .item1:hover {
+    background-image: url("../image/colorful_square_icon.png");
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: -9px -9px;
+    transition-duration: .5s;
+}
+.top-flex-containner .item2:hover {
+    background-image: url("../image/colorful_square_icon.png");
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: -72px -9px;
+    transition-duration: .5s;
+}
+.top-flex-containner .item3:hover {
+    background-image: url("../image/colorful_square_icon.png");
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: -9px -71px;
+    transition-duration: .5s;
+}
+.top-flex-containner .item4:hover {
+    background-image: url("../image/colorful_square_icon.png");
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: -73px -132px;
+    transition-duration: .5s;
+}
+.top-flex-containner .item5:hover {
+    background-image: url("../image/colorful_square_icon.png");
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: -8px -132px;
+    transition-duration: .5s;        
+}
+/*Begin hover icon */
+.top-flex-containner .item1 {
+    background-image: url("../image/no_colorful_square_icon.png");
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: -9px -9px;
+}
+.top-flex-containner .item2 {
+    background-image: url("../image/no_colorful_square_icon.png");
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: -72px -9px;
+}
+.top-flex-containner .item3 {
+    background-image: url("../image/no_colorful_square_icon.png");
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: -9px -71px;
+}
+.top-flex-containner .item4 {
+    background-image: url("../image/no_colorful_square_icon.png");
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: -73px -132px;
+}
+.top-flex-containner .item5 {
+    background-image: url("../image/no_colorful_square_icon.png");
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: -8px -132px;
+}
+/*End hover icon*/
+/*End thêm hình cho phần right-section flexbox header*/
+
+
+
+/*Chỉnh link*/
+a:link {
+    text-decoration: none;
+    transition-duration: 1s;
+}
+.right-section a:visited {
+    color: black;
+}
+.right-section a:active {
+    color: #f8f9fa;
+    transition-duration: 0.1s;
+}
+.bot-flex-containner .item-link:hover {
+    background-color: #ffc107d9;
+
+}
+.bot-flex-containner .bot-item:hover {
+    background: #ffc107d9; /* background: #ffd84e17;*/
+    height: auto;
+    width: auto;
+    margin: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ffc107d9;
+    border-radius: 4px;
+}
+/*end chỉnh link*/
+
+/*Search*/
+.search-margin-top {
+    margin-top:13px;
+}
+.search input[type=text]{
+    transition: width 0.4s ease-in-out;
+    width: 60px;
+    border:2px solid #ffffff;
+    border-radius: 10px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.search input[type=text]:hover {
+    transition: width 0.4s ease-in-out;
+    width: 60px;
+    border:2px solid #17a2b8;
+    border-radius: 10px;
+    width: 86%;
+}
+input[type=text]:focus {
+    border-radius: 10px;
+    border:2px solid #17a2b8;
+    width: 86%;
+}
+.search button[type=submit] {
+    border:2px solid #17a2b8;
+    border-radius: 10px;
+    background-color: white;
+}
+.search button[type=submit]:hover {
+    border:2px solid #607d8b;
+    border-radius: 10px;
+    background-color: white;
+}
+
+/*Begin body*/
+/*chỉnh hình ảnh cho slideshow*/
+  .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+  .slide {
+    width: 100%;
+    margin: auto;
+    height: auto;
+  }
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+
+
+/*End body*/
+
+/*chinh màu cho background*/
+
+/*menu*/
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 1)!important;
+}
+
+.img-logo {
+    background-color: rgb(255, 193, 7);
+}
+.left-logo {
+    background-color: rgb(255, 193, 7);
+    width: 100%;
+    height: 157px;
+}
+.search {
+      background-color:#343a40;
+}
+
+.title-row {
+    background-color: #38d8e82e;
+}
+
+.slideshow-row {
+    background-color: #f8f9fa!important;
+}
+
+.sort-row {
+    background-color: #f8f9fa;
+}
+.top-header-row {
+    background-color: #f8f9fa;
+}
+/*Begin chỉnh menu*/
+
+.parent-li-menu {
+    position: relative;
+}
+
+.rank1-ul-menu {
+    position: absolute;
+    z-index: 1;
+    display: none;
+  
+}
+.parent-li-menu:hover .rank1-ul-menu  {
+    display: block;
+    z-index: 9999;
+    background: #343a407d;
+
+}
+.rank1-li-menu {
+    position: relative;
+    width: 125px;
+}
+
+/*chỉnh absolute cho div rank2-menu theo rank1-li-menu bên trên (chú ý****)*/
+.rank2-menu {
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: 140px;
+}
+
+.rank1-li-menu:hover .rank2-menu {
+    display: block;
+    left: 125px;
+    top:8px;
+    background: #343a407d;  
+}
+.rank2-ul-menu {
+    position: absolute;
+    top: 20px;
+  
+}
+/*Chỉnh menu cấp 3*/
+.rank3-menu {
+    position: absolute;
+    display: none;
+    width: 100px;
+    height: 140px;
+}
+.rank2-li-menu {
+    width: 100px;
+}
+.rank2-li-menu:hover .rank3-menu {
+    display: block;
+    left: 100px;
+    top: -20px;
+    background: #343a407d;  
+}
+
+.rank3-ul-menu {
+    position: absolute;
+    top: 20px;
+}
+/*End chỉnh menu*/
+
+
+/*chỉnh dòng kẻ ngang cho sản phẩm*/
+.horizontal-line {
+    display: flex;
+    position: relative;
+    height: 20px;
+    margin-top: 15px;
+}
+.product-name-title {
+    font-size: 16px;
+    font-weight: bolder;
+    margin-right: 10px;
+    top: -7px;
+    position: relative;
+}
+.line {
+    position: absolute;
+    border-top: 2px solid #333;
+    border-color: black;
+    width: 614px;
+    left: 315px;
+    top: 6px;}
+
+/*sản phẩm*/
+.card-img {
+    transition: 0.5s;
+    margin: 8px 0 8px 0;
+}
+.card-img:hover {
+    transform: scale(1.15); 
+}
+
+.card {
+    width: 100%;
+    position: relative;
+}
+.product-img {
+    width: 100%;
+
+}
+.product-button {
+    display: flex;
+    justify-content: space-around;
+}
+.center-text {
+    text-align: center;
+}
+.heart-icon:hover {
+    cursor:pointer;
+}
+.black-heart-icon {
+    display: none;
+}
+.card-img{
+
+}
+.brand {
+    position: absolute;
+    background: #fc636b ;
+    color: #fff;
+    display: inline-block;
+    right: 0;
+    padding: 2px 6px 4px;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    z-index: 1;
+    border:0.5px solid #e0cece;
+    border-radius: 6px;
+    animation-name: effect;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes effect {
+    from {
+        border: 4px dotted #fc636b;
+        text-shadow: 5px 0px 11px #e3a7a4;
+    }
+    to {
+        border: 4px dotted  #343a40;
+        text-shadow: 0 0 3px #343a40;, 0 0 5px #0000FF;
+    }
+}
+/*end sản phẩm*/
+
+/*footer*/
+.footer-link {
+    color: black;
+    text-decoration: none;
+}
+.youtube-link {
+    color:  #ff0000;
+    text-decoration: none;
+}
+
+.twitter-link {
+    color:  #1da1f2;
+    text-decoration: none;
+}
+.facebook-link {
+    color:  #3b5998;
+    text-decoration: none;
+}
+.snapchat-link {
+    color:  rgb(255, 193, 7);;
+    text-decoration: none;
+}
+
+.youtube-link:hover {
+    color:  #ff0000;
+    opacity: 0.5;
+}
+.twitter-link:hover {
+    color:  #1da1f2;
+    opacity: 0.5;
+}
+.facebook-link:hover {
+    color:  #1da1f2;
+    opacity: 0.5;
+}
+.snapchat-link:hover {
+    color:  #fede42;
+    opacity: 0.5;
+}
+
+
+.payment-container .card1 {
+    background: url("../image/CreditCardLogo.png");
+    background-repeat: no-repeat;
+    background-size: 484px;
+    background-position: -30px -28px
+}
+
+.payment-container .card2 {
+    background: url("../image/CreditCardLogo.png");
+    background-repeat: no-repeat;
+    background-size: 517px;
+    background-position: -34px -115px;
+}
+.payment-container .card3 {
+    background: url("../image/CreditCardLogo.png");
+    background-repeat: no-repeat;
+    background-size: 430px;
+    background-position: -20px -161px;
+}
+.payment-container .card4 {
+    background: url("../image/CreditCardLogo.png");
+    background-repeat: no-repeat;
+    background-size: 462px;
+    background-position: -133px -26px;
+}
+.payment-container .card5 {
+    background: url("../image/CreditCardLogo.png");
+    background-repeat: no-repeat;
+    background-size: 428px;
+    background-position: -219px -162px;
+}
+.payment-container .card6 {
+    background: url("../image/CreditCardLogo.png");
+    background-repeat: no-repeat;
+    background-size: 435px;
+    background-position: -225px -23px;
+}
+
+.service-ol {
+    margin-left: 25px;
+    list-style-type: none;
+}
+.rights-text {
+    text-align: center;
+    text-shadow: 10px;
+}
+
+input[type="email"] {
+    border: 1 px solid;  
+    height: 38px;
+    margin-top: 12px;
+    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 10px; 
+}     
+input[type="submit"] {
+    border: 1px solid;
+    border-radius: 6px;
+    height: 33px;
+    width: 100px;
+    transition-duration: 1s;
+    text-shadow: 1px 2px 8px;   
+}
+input[type="submit"]:hover {
+    border: 1px solid;
+    border-radius: 6px;
+    width: 100%;
+    background-color: #3ed4ffbd;
+    transform: translate(2px);
+}
+.about {
+    text-align: center;
+}
+.about .link {
+    color: black;
+}
+
+/*end footer*/

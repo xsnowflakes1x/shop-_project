@@ -1,0 +1,135 @@
+/*Begin Index CSS grid*/
+/*begin header*/
+/*.left-logo {
+	height: 100px;
+}
+.center-banner {
+	height: 100px;
+}
+.right-section {
+	height: 80px;
+}*/
+
+/*.menu {
+	height: 60px;
+}*/
+/*.search {
+	height: 50px;
+}*/
+/*.slide {
+	height: 300px;
+}*/
+/*end header*/
+
+/*begin products*/
+/*.top-seller {
+	height: 280px;
+}*/
+/*.new-product {
+	height: 200px;
+}
+*/
+/*.promotional-product {
+	height: 200px
+}*/
+/*end product*/
+
+/*begin advertisement*/
+.advertisement {
+	height: 400px;	
+}
+/*end advertisement*/
+
+/*begin footer*/
+/*.top-footer {
+	height: 150px;
+}
+.bot-footer {
+	height: 100px;
+}*/
+/*end footer*/
+/*nút tam giác*/
+/*.product-name-title:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 16px solid #fc636b;
+    border-left: 10px solid rgba(69, 42, 21, 0);
+    border-right: 10px solid rgba(199, 57, 57, 0);
+    left: 45%;
+    top: 99%;
+    z-index: 1;
+}
+*/
+/*End Index CSS grid*/
+
+/*Begin ChiTietSanPham CSS grid*/
+.product-image {
+	height: 400px;
+}
+.product-infomation {
+	height: 300px;
+}
+.tab {
+	height: 300px;
+}
+.related-product {
+	height: 200px;
+}
+/*End ChiTietSanPham  CSS grid*/
+/*Begin flexbox*/
+.top-flex-containner {
+	background: #888886;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+.top-item {
+/*	background: #e6e3c8;*/
+	height: 55px;
+	width: 55px;
+	margin: 5px;
+	margin-top: 10px;
+}
+
+.center-flex-containner {
+	display: flex;
+}
+.center-item {
+    background: #ffc107;
+    height: 23px;
+    width: 100%;
+}
+.bot-flex-containner {
+	background: #888886;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+.bot-item {    
+	background: #ffd84e17;
+    height: auto;
+    width: auto;
+    margin: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #676565;
+    border-radius: 4px;
+}
+
+/*footer*/
+.payment-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: space-between;
+/*    background: black;*/
+} 
+.payment-item {
+    height: 40px;
+    width: 85px;
+    background-color: #f9acac;
+}
+
+
+/*End flexbox*/

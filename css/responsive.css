@@ -1,0 +1,298 @@
+Chỉnh responsive*/
+/*Begin chỉnh resposive hình cho <div class="top-header">*/
+@media screen and (max-width: 1280px ) {
+.center-banner {
+    background-image: url("../image/banner.png");
+    height: 131px;
+    background-repeat: no-repeat;
+    background-size: 485px;
+    background-position-x: -3px;
+    background-position-y: -95px;
+    }
+.left-logo {
+    background-color: #ffc107;
+    width: 100%;
+    height: 177px;
+    }
+.center-item {
+    background: #ffc107;
+    height: 34px;
+    width: 100%;
+    }    
+}    
+
+@media screen and (max-width: 1199px ) {
+.center-banner {
+	background-image: url("../image/banner.png");
+    height: 153px;
+    background-repeat: no-repeat;
+    background-size: 470px;
+    background-position-x: -32px;
+    background-position-y: -84px;
+    }
+.center-item {
+    background: #ffc107;
+    height: 20px;
+    width: 100%;
+}
+}
+
+@media screen and (max-width: 991px ) {
+.center-banner {
+    background-image: url(../image/banner.png);
+    height: 177px;
+    background-repeat: no-repeat;
+    background-size: 370px;
+    background-position-x: -17px;
+    background-position-y: -178px;
+}
+ .left-logo {
+    background-color: #ffc107;
+    height: 177px;
+    }
+ .img-logo {
+    background-color: rgb(255, 193, 7);
+    padding-top: 40px;
+    }   
+}
+
+@media screen and (max-width: 767px ) {
+.center-banner {
+	background-image: url("../image/banner.png");
+	height: 105px;
+    background-repeat: no-repeat;
+    background-size: 340px;
+    background-position-x: -155px;
+    background-position-y: -193px;
+    margin-left: 30px;
+	}
+.center-banner {
+    background-image: url(../image/banner.png);
+    height: 176px;
+    background-repeat: no-repeat;
+    background-size: 374px;
+    background-position-x: -185px;
+    background-position-y: -185px;
+    margin-left: 30px;
+    }
+.img-logo {
+    padding-top: 35px;    
+    }
+}
+
+@media screen and (max-width: 575px ) {
+.center-banner {
+	height: 126px;
+    background-image: url("../image/sale.png");
+    background-repeat: no-repeat;
+    background-size: 0;
+    background-position-x: 92px;
+    background-position-y: 4px;
+    margin: auto;	
+    }
+.img-logo {
+    background-color: rgb(255, 193, 7);
+    height: 177px;
+    }    
+}
+
+.banner-img {
+	display: none;
+}
+@media screen and (max-width: 575px ) {
+.banner-img {
+	display: block;
+    height: 137px;
+    margin: auto;
+	}
+}
+
+
+/*End chỉnh resposive hình cho banner
+
+/*Begin RESPONSIVE TEXT*/
+
+/*Resposive cho text menu*/
+@media screen and (max-width: 991px) and (min-width: 767px) {
+.menu-text {
+    font-size: 9px;
+    }
+}
+
+/*End RESPONSIVE TEXT*/
+
+/*Responsive menu*/
+
+@media screen and (max-width: 767px) {
+.parent-li-menu:hover .rank1-ul-menu {
+    left: 105px;
+    top: 10px;
+    }
+}
+@media screen and (max-width: 767px)  {
+.rank2-ul-menu {
+    position: absolute;
+    top: 20px;
+    left: 4px;
+    width: 65px;
+    }
+}
+@media screen and (max-width: 767px)  {
+    .rank2-li-menu:hover .rank3-menu {
+    display: block;
+    left: 55px;
+    top: -5px;
+}
+}
+
+@media screen and (max-width: 767px)  {
+.rank3-ul-menu {
+    position: absolute;
+    top: 20px;
+    left: 8px;
+ }
+} 
+/*chỉnh dòng kẻ ngang*/
+@media screen and (max-width: 991px) {
+.product-name-title { 
+    font-size: 16px;
+    font-weight: bolder;
+    margin-right: 10px;
+    position: absolute;
+    top: -6px;
+}
+}
+.line {
+    border-top: 2px solid #333;
+    border-color: black;
+    width: 714px;
+    left: 215px;
+    top: -5px;
+
+    }
+
+.horizontal-line {
+    display: flex;
+    position: relative;
+    height: 26px;
+    margin-top: 12px;
+    }
+}
+@media screen and (max-width: 767px)
+{
+.product-name-title { 
+    font-size: 17px;
+    font-weight: bolder;
+    margin-right: 10px;
+}    
+.line {
+    border-top: 2px solid #333;
+    border-color: black;
+    width: 345px;
+    margin-top: 13px;
+    left: 165px;
+}
+
+}
+@media screen and (max-width: 576px)
+{
+.product-name-title { 
+    font-size: 16px;
+    font-weight: bolder;
+    margin-right: 10px;
+}    
+.line {
+    border-top: 2px solid #333;
+    width: 366px;
+    left: 171px;
+    }
+}
+
+/*sản phẩm */
+@media screen and (max-width: 1440px) and (min-width: 1025px)
+{
+.product-name-title { 
+    font-size: 16px;
+    font-weight: bolder;
+    margin-right: 10px;
+}    
+.line {
+    border-top: 2px solid #333;
+    width: 762px;
+    top: -5px;
+    left: 167px;
+    }
+}
+@media screen and (max-width: 991px) {
+.brand {
+    position: absolute;
+    background: #fc636b9e;
+    color: #fff;
+    display: inline-block;
+    padding: 2px 6px 4px;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    z-index: 1;
+    border: 0.5px solid #e0cece;
+    border-radius: 6px;
+    }
+}
+
+/*end sản phẩm*/
+
+/*resposive cho thanh toán*/
+@media screen and (max-width: 767px)
+{
+.payment-item {
+    height: 33px;  
+}  
+.payment-container .card1 {
+    background: url("../image/CreditCardLogo.png");
+    background-repeat: no-repeat;
+    background-size: 294px;
+    background-position: -19px -12px;
+}
+
+.payment-container .card2 {
+    background: url("../image/CreditCardLogo.png");
+    background-repeat: no-repeat;
+    background-size: 336px;
+    background-position: -25px -70px;
+}
+.payment-container .card3 {
+    background: url("../image/CreditCardLogo.png");
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position: -19px -110px;
+}
+.payment-container .card4 {
+    background: url("../image/CreditCardLogo.png");
+    background-repeat: no-repeat;
+    background-size: 290px;
+    background-position: -85px -12px;
+}
+.payment-container .card5 {
+    background: url("../image/CreditCardLogo.png");
+    background-repeat: no-repeat;
+    background-size: 322px;
+    background-position: -175px -119px;
+}
+
+.payment-container .card6 {
+    background: url("../image/CreditCardLogo.png");
+    background-repeat: no-repeat;
+    background-size: 305px;
+    background-position: -164px -14px;
+}
+.payment-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+}
+.payment-item {
+    height: 33px;
+    width: 64px;
+    }
+}
