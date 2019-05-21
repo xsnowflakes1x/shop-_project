@@ -479,5 +479,47 @@ input[type="submit"]:hover {
 .about .link {
     color: black;
 }
-
 /*end footer*/
+
+/*begin trangchitietsanpham */
+
+/*begin slideimg*/
+  .slideImg {
+    width: 100%;
+  }
+  .slidesInBox {
+    display: none;
+  }
+.product-image .container {
+    position: relative;
+    user-select: none;
+}
+.pre, .next {
+    position: absolute;
+    top: 44%;
+}
+.pre, .next:hover {
+    cursor: pointer;
+}
+
+.galerryItem {
+    cursor: pointer;
+    opacity: 0.8;
+}
+.active, .galerryItem:hover {
+    opacity: 1;
+}
+
+.galerry-row {
+    padding-top: 10px;
+}
+.next {
+    right: 14px;
+}
+.numberText {
+    font-size: 20px;
+    font-weight: bold;
+}
+/*end slideimg*/
+
+/*end trangchitietsanpham*/

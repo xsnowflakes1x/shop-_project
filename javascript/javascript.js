@@ -30,3 +30,22 @@ function changeIcon(e) {
 	}	
 }	
 
+// slideshow trangchitietsanpham 
+
+var slideIndex = 0;
+showSlides(slideIndex); 
+//x là index hiện tại
+function showSlides(x) {
+	var slides = document.getElementsByClassName('slidesInBox'); //biến slides chứa các slide
+	var activeImg = document.getElementsByClassName('galerryItem'); //biến chứa các hình con chưa được active
+	var i;
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = 'none';  //tắt tất cả các hình trước
+	}
+	for (i = 0; i < activeImg.length; i++) {
+		activeImg[i].className = activeImg[i].className.replace(" active", ""); //tắt tất cả active trước đó
+	}		
+	slides[x].style.display = "block";   //bật hình hiện tại
+	activeImg[x].className += ' active';
+}
+
