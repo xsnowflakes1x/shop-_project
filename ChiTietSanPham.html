@@ -63,9 +63,9 @@
 			<div class="bot-header">
 				<div class="row bot-header-row bg-dark">
 					<div class="col-sm-12 col-md-7 col-lg-7 ">
-						<div class="menu menu-text">
+						<div class="menu menu-text ">
 							<!-- Tạo thanh navbar dùng bootstrap-->
-							<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+							<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
 							  <a class="navbar-brand" href="Index.html">&nbsp;<i class="fas fa-home"></i>&nbsp;</a>
 							  <!-- Tạo nút button -->
 							  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -281,8 +281,8 @@
 					<!-- 				div.container>(div.slidesInBox>((div.numberText{$/4})+(img.Img[src="image/products/product$.jpg" alt="product$"])))*4	-->	
 					<!--div.row>(div.col.col-sm.col-md.col-lg>img.slideImg.fadeImg[src="image/products/product1.$.jpg" alt="product$"])*4-->
 					<div class="container">
-						<a class="pre"><i class="fas fa-arrow-circle-left fa-2x"></i></a>
-						<a class="next"><i class="fas fa-arrow-circle-right fa-2x"></i></a>
+						<a class="pre" onclick="next(-1)"><i class="fas fa-arrow-circle-left fa-2x"></i></a>
+						<a class="next" onclick="next(1)"><i class="fas fa-arrow-circle-right fa-2x"></i></a>
 						<div class="slidesInBox">
 							<div class="numberText">1/4</div>
 							<img src="image/products/product1.jpg" alt="product1" class="slideImg">
@@ -302,16 +302,74 @@
 					</div>	
 
 					<div class="row galerry-row">
-						<div class="col col-sm col-md col-lg galerryItem"><img src="image/products/product1.jpg" alt="product1" class="slideImg fadeImg" onclick="showSlides(0)"></div>
-						<div class="col col-sm col-md col-lg galerryItem"><img src="image/products/product1.2.jpg" alt="product2" class="slideImg fadeImg" onclick="showSlides(1)"></div>
-						<div class="col col-sm col-md col-lg galerryItem"><img src="image/products/product1.3.jpg" alt="product3" class="slideImg fadeImg" onclick="showSlides(2)"></div>
-						<div class="col col-sm col-md col-lg galerryItem"><img src="image/products/product1.4.jpg" alt="product4" class="slideImg fadeImg" onclick="showSlides(3)"></div>
+						<div class="col col-sm col-md col-lg galerryItem"><img src="image/products/product1.jpg" alt="product1" class="slideImg fadeImg" onclick="currentSlide(0)"></div>
+						<div class="col col-sm col-md col-lg galerryItem"><img src="image/products/product1.2.jpg" alt="product2" class="slideImg fadeImg" onclick="currentSlide(1)"></div>
+						<div class="col col-sm col-md col-lg galerryItem"><img src="image/products/product1.3.jpg" alt="product3" class="slideImg fadeImg" onclick="currentSlide(2)"></div>
+						<div class="col col-sm col-md col-lg galerryItem"><img src="image/products/product1.4.jpg" alt="product4" class="slideImg fadeImg" onclick="currentSlide(3)"></div>
 					</div>	
 
 				</div>
 			</div>
-			<div class="col-sm-7 col-md-7 col-lg-7 bg-success"> 
-				<div class="product-infomation">product-infomation </div>
+			<div class="col-sm-7 col-md-7 col-lg-7 bg-light"> 
+				<div class="product-infomation">
+					<form class="cart-form" action="TrangGioHang.html">
+						<div class="product-content">
+							<h3 class="productName">Giầy thể thao</h3>
+							<h4>AIR JORDAN</h4>
+						</div>
+						<div class="productPrice">
+							<del class="old-price">Giá cũ: 7.770.000 đồng</del>
+							<br>
+							<span class="new-price">Giảm: 6.500.000 đồng</span>
+						</div>	
+						<div class="size-list">
+							<b>Kích thước:</b>
+							<input id="size-cart" type="hidden" value=" " name="sizeCart">
+							<a href="#">38</a>
+							<a href="#">39</a>
+							<a href="#">40</a>
+							<a href="#">41</a>
+							<a href="#">42</a>
+							<a href="#">43</a>
+							<a href="#">44</a>                               
+						</div>
+						<div class="color-list">
+							<b>Màu sắc:</b>
+							<input id="color-cart" type="hidden" value=" " name="colorCart">
+							<ul class="color-list-ul">
+								<li class="color-list-li">
+									<a href="#"><span class="badge badge-pill badge-success">xanh</span></a>
+								</li>
+								<li class="color-list-li">
+									<a href="#"><span class="badge badge-pill badge-secondary">xám</span></a>
+								</li>
+								<li class="color-list-li">
+									<a href="#"><span class="badge badge-pill badge-danger">đỏ</span></a>
+								</li>
+								<li class="color-list-li">
+									<a href="#"><span class="badge badge-pill badge-warning">vàng</span></a>
+								</li>																
+								<li class="color-list-li">
+									<a href="#"><span class="badge badge-pill badge-light">trắng</span></a>
+								</li>
+								<li class="color-list-li">
+									<a href="#"><span class="badge badge-pill badge-dark">đen</span></a>
+								</li>
+								<li class="color-list-li">
+									<a href="#"><span class="badge badge-pill badge-info">xanh ngọc</span></a>
+								</li>															
+							</ul>
+						</div>                         
+
+						<input type="hidden" name ="masp" value="0119">	
+						<input type="number" name="quantity" min="1" max="5" class="input-quantity">
+						<div class="cart-button">
+							<button type="submit" class="btn btn-outline-info ">Mua<i class="fas fa-shopping-cart fa-flip-horizontal"></i>
+							</button>
+						</div>
+					</form>
+
+				</div>
 			</div>
 		</div>
 		<div class="row function-row"> 

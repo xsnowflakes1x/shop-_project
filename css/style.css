@@ -301,7 +301,24 @@ input[type=text]:focus {
     top: 6px;}
 
 /*sản phẩm*/
+.overlay {
+    position: absolute;
+    left: 0px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.3);
+    color: #f1f1f1;
+    width: 35%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    text-align: center;
+    left: 33%;
+}
+.card-img:hover .overlay {
+  opacity: 1;
+}
 .card-img {
+    position: relative;
     transition: 0.5s;
     margin: 8px 0 8px 0;
 }
@@ -330,9 +347,7 @@ input[type=text]:focus {
 .black-heart-icon {
     display: none;
 }
-.card-img{
 
-}
 .brand {
     position: absolute;
     background: #fc636b ;
@@ -519,6 +534,69 @@ input[type="submit"]:hover {
 .numberText {
     font-size: 20px;
     font-weight: bold;
+}
+
+.productName {
+    color: #6c757d;
+    font-size: 23px;
+    letter-spacing: 1px;
+    font-weight: 800;
+
+}
+.productPrice .old-price {
+    font-size: 30px;
+    color: #21202085;
+    font-weight: 600;
+    font-size: 25px;
+    font-weight: 300;
+    font-style: italic;
+}
+.productPrice .new-price {
+    font-size: 25px;
+    color: #212020;
+    font-weight: 600;
+
+}
+
+.size-list >a {
+    display: inline-block;
+    margin-left: 10px;
+    color: #000;
+    border: 1px solid #000;
+    padding: 0 5px;
+    font-size: 13px;
+}
+.size-list>a:hover, .size-list>a.active {
+    color: #ddd;
+    border-color: #ddd;
+}    
+.color-list-ul >.color-list-li {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0px 10px;
+    width: auto;
+}
+.color-list-ul {
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 2px;
+}
+.cart-form .input-quantity, input[type="text"] {
+    padding: 4px 3px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 10%;
+}
+.cart-form  .cart-button {
+    display:inline-block;
+}
+.link-bnt {
+    text-decoration: none;
+    color: black;
+}
+.link-bnt:hover {
+    text-decoration: none;
+    color: white;
 }
 /*end slideimg*/
 

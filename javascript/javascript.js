@@ -31,11 +31,21 @@ function changeIcon(e) {
 }	
 
 // slideshow trangchitietsanpham 
+var index = 0;//x là index hiện tại
+showSlides(index); //khởi tạo giá trị mặc định
 
-var slideIndex = 0;
-showSlides(slideIndex); 
-//x là index hiện tại
-function showSlides(x) {
+//tạo nút  next
+
+
+function next(n) {
+	showSlides(index += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) { //n vừa nhận giá trị index vừa nhận giá trị -1 /1 của hàm next
 	var slides = document.getElementsByClassName('slidesInBox'); //biến slides chứa các slide
 	var activeImg = document.getElementsByClassName('galerryItem'); //biến chứa các hình con chưa được active
 	var i;
@@ -44,8 +54,14 @@ function showSlides(x) {
 	}
 	for (i = 0; i < activeImg.length; i++) {
 		activeImg[i].className = activeImg[i].className.replace(" active", ""); //tắt tất cả active trước đó
-	}		
-	slides[x].style.display = "block";   //bật hình hiện tại
-	activeImg[x].className += ' active';
+	}
+	if (n < 0) {
+		 index = slides.length - 1;
+	}
+	if (n >= slides.length) {
+		index = 0;
+	}
+	slides[index].style.display = "block";   //bật hình hiện tại
+	activeImg[index].className += ' active';
 }
 
