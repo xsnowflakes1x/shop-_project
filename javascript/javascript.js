@@ -31,7 +31,7 @@ function changeIcon(e) {
 }	
 
 // slideshow trangchitietsanpham 
-var index = 0;//x là index hiện tại
+var index = 1;//x là index hiện tại
 showSlides(index); //khởi tạo giá trị mặc định
 
 //tạo nút  next
@@ -42,7 +42,7 @@ function next(n) {
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showSlides(index = n);
 }
 
 function showSlides(n) { //n vừa nhận giá trị index vừa nhận giá trị -1 /1 của hàm next
@@ -55,13 +55,32 @@ function showSlides(n) { //n vừa nhận giá trị index vừa nhận giá tr�
 	for (i = 0; i < activeImg.length; i++) {
 		activeImg[i].className = activeImg[i].className.replace(" active", ""); //tắt tất cả active trước đó
 	}
-	if (n < 0) {
-		 index = slides.length - 1;
+	if (n < 1) {
+		 index = slides.length;
 	}
-	if (n >= slides.length) {
-		index = 0;
+	if (n > slides.length) {
+		index = 1;
 	}
-	slides[index].style.display = "block";   //bật hình hiện tại
-	activeImg[index].className += ' active';
+	slides[index-1].style.display = "block";   //bật hình hiện tại
+	activeImg[index-1].className += ' active';
 }
 
+
+// Tạo tab cho chitietsanpham
+function showTab(e,id) {
+	var tabButton = document.getElementsByClassName("tab-button"); // lấy tên class của button 
+	var tabContent = document.getElementsByClassName("tab-content");// lấy tên class của content  
+	var i;
+	//off active
+	for(i = 0; i < tabButton.length; i++) {
+		tabButton[i].className = tabButton[i].className.replace(" active","");
+	}
+	//none content
+	for(i=0; i<tabContent.length; i++) {
+		tabContent[i].style.display = 'none';
+	}
+	document.getElementById(id).style.display = 'block';//cẩn thận ko ghi: tabButton[i].className += " active"; vì lấy id từ bên ngoài vào
+	e.currentTarget.className += ' active'; //nghe sự kiện trực tiếp
+
+}
+ 	document.getElementById("default").click(); //mặc định mở tab

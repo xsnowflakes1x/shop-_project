@@ -75,7 +75,8 @@
 	height: 300px;
 }
 .related-product {
-	height: 200px;
+    height: 355px;
+    padding-top: 15px;
 }
 /*End ChiTietSanPham  CSS grid*/
 /*Begin flexbox*/

@@ -178,8 +178,7 @@ Chỉnh responsive*/
     margin-top: 12px;
     }
 }
-@media screen and (max-width: 767px)
-{
+@media screen and (max-width: 767px) {
 .product-name-title { 
     font-size: 17px;
     font-weight: bolder;
@@ -194,8 +193,7 @@ Chỉnh responsive*/
 }
 
 }
-@media screen and (max-width: 576px)
-{
+@media screen and (max-width: 576px) {
 .product-name-title { 
     font-size: 16px;
     font-weight: bolder;
@@ -209,8 +207,7 @@ Chỉnh responsive*/
 }
 
 /*sản phẩm */
-@media screen and (max-width: 1440px) and (min-width: 1025px)
-{
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
 .product-name-title { 
     font-size: 16px;
     font-weight: bolder;
@@ -241,9 +238,8 @@ Chỉnh responsive*/
 
 /*end sản phẩm*/
 
-/*resposive cho thanh toán*/
-@media screen and (max-width: 767px)
-{
+/*resposive cho thanh toán footer*/
+@media screen and (max-width: 767px) {
 .payment-item {
     height: 33px;  
 }  
@@ -296,3 +292,30 @@ Chỉnh responsive*/
     width: 64px;
     }
 }
+/*end resposive cho thanh toán footer*/
+
+/*begin resposive cho trang chi tiết sp */
+
+/*chỉnh chiều cao cho single-product-row*/
+@media screen and (max-width: 991px) {
+.product-slideshow {
+    height: 630px;
+    }
+.product-info {
+    height: 440px;
+    }        
+}
+@media screen and (max-width: 767px) {
+.product-slideshow {
+    height: 470px;
+    } 
+.product-info {
+    height: 477px;
+    }     
+.product-infomation {
+     height: 478px;
+    } 
+          
+}
+
+/*end resposive cho trang chi tiết sp */
