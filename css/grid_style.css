@@ -75,7 +75,7 @@
 	height: 300px;
 }
 .related-product {
-    height: 355px;
+    height: auto;
     padding-top: 15px;
 }
 /*End ChiTietSanPham  CSS grid*/

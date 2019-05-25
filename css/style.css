@@ -614,7 +614,7 @@
     border-radius: 4px;
     padding: 2px;
 }
-.cart-form .input-quantity, input[type="text"] {
+.quantity input[type="text"] {
     padding: 4px 3px;
     border: 1px solid #ccc;
     border-radius: 4px;

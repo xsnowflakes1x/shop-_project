@@ -1,5 +1,5 @@
 // hiển thị icon black heart
-function changeIcon(e) {
+function changeIcon(e) { //e là thẻ 
 
 	//lấytoàn bộ tên class (tim trắng)	
 	var selector_class_name = e.querySelector(".far").className;
@@ -25,7 +25,7 @@ function changeIcon(e) {
 
 		tim_trang_class.style.display="inline-block";
 		tim_den_class.style.display="none";
-		//Đổi tên tạm class emty-heart
+		//Gán lại tên cũ cho class emty-heart
 		tim_trang_class.className="far fa-heart fa-lg";		
 	}	
 }	
@@ -67,7 +67,7 @@ function showSlides(n) { //n vừa nhận giá trị index vừa nhận giá tr�
 
 
 // Tạo tab cho chitietsanpham
-function showTab(e,id) {
+function showTab(e,id) { //e là event dùng để bắt sự kiện
 	var tabButton = document.getElementsByClassName("tab-button"); // lấy tên class của button 
 	var tabContent = document.getElementsByClassName("tab-content");// lấy tên class của content  
 	var i;
@@ -80,7 +80,9 @@ function showTab(e,id) {
 		tabContent[i].style.display = 'none';
 	}
 	document.getElementById(id).style.display = 'block';//cẩn thận ko ghi: tabButton[i].className += " active"; vì lấy id từ bên ngoài vào
-	e.currentTarget.className += ' active'; //nghe sự kiện trực tiếp
-
+	e.currentTarget.className += ' active'; 
+	//currentTarget trả về thẻ mang Event Listener của chính nó và thẻ này sinh ra sự kiện
+	//ngược lại target trả về 1 thẻ nào đó ko mang Event Listener và thẻ dó sinh ra sự kiện  
+	//	active //tạo dấu mũi tên cho phần tử hiện tại được active
 }
  	document.getElementById("default").click(); //mặc định mở tab

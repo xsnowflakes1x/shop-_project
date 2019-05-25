@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.errMess {
+			color:red;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<form name="myForm">
+		Login:<br>
+		<input type="text" id="txtLogin" name="login" value=""  placeholder="login"  title="có khoảng trống "><span id="mess_id" class="errMess">Không thêm khoảng trống</span><br>
+		Password:<br>
+		<input type="password" id="txtPassword" name="password"  placeholder="password"><span id="mess_id2" class="errMess">Không trùng khớp</span><br>
+		<input type="submit" id="submit">
+	</form>	
+	<button>Hiện</button>
+	<p > Kết quả </p>
+	<script>
+		function checkLogin() {
+			var str = document.getElementById("txtLogin");
+			str = str.value.trim();
+			if (str === '') {
+				document.getElementById("mess_id").style.display = 'inline';
+			}
+			else {
+				document.getElementById("mess_id").style.display = '';
+			}
+		}
+		function checkPassword() {
+			var p = document.getElementById("txtPassword");
+			p = p.value;
+			if(p === "toanthang")
+			{
+				document.getElementById("mess_id2").style.display = '';
+				return true;
+			}
+			else {
+				document.getElementById("mess_id2").style.display = 'inline';
+			}
+		}
+
+		function showResult() {
+			var a = document.myForm.login.value;
+			document.getElementsByTagName("p")[0].innerHTML = a;
+		}
+		document.getElementById("txtLogin").onblur = checkLogin;
+		document.getElementById("txtPassword").onblur = checkPassword;
+		document.getElementsByTagName("button")[0].onclick = showResult;
+
+	</script>
+</body>
+</html>
