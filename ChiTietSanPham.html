@@ -276,8 +276,8 @@
 		</div>
 		<!-- tạo slideshow gallery và thông tin số lượng sp ... -->
 		<div class="row single-product-row"> 
-			<div class="col-sm-12 col-md-12 col-lg-5 bg-secondary product-slideshow"> 
-				<div class="product-image shadow-none p-4 mb-4 bg-light">
+			<div class="col-sm-12 col-md-12 col-lg-5 product-slideshow"> 
+				<div class="product-image shadow p-4 mb-4 bg-white">
 					<!-- div.container>(div.slidesInBox>((div.numberText{$/4})+(img.Img[src="image/products/product$.jpg" alt="product$"])))*4	-->	
 					<!--div.row>(div.col.col-sm.col-md.col-lg>img.slideImg.fadeImg[src="image/products/product1.$.jpg" alt="product$"])*4-->
 
@@ -311,7 +311,7 @@
 			</div>
 			<div class="col-sm-12 col-md-12 col-lg-7 bg-light product-info"> 
 				<div class="product-infomation shadow p-4 mb-4 bg-white">
-					<form class="cart-form" action="TrangGioHang.html">
+					<form name="detail_product_form"class="cart-form" action="TrangGioHang.html">
 						<div class="product-content">
 							<h3 class="productName">Giầy thể thao</h3>
 							<h4>AIR JORDAN</h4>
@@ -364,12 +364,16 @@
 						<input type="hidden" name ="masp" value="0119">	
 						<div class="quantity">
 							<b>Số lượng:</b>
-							<input type="number" name="quantity" min="1" max="5" class="input-quantity">
+							<!-- <input type="number" name="quantity" value="" min="1" max="5" class="input-quantity" id="quantity_id"> -->
+							<input type="text" name="quantity" value="" pattern="^[0-9]\d{0,1}$" title="tối đa 2 chữ số" class="input-quantity" id="quantity_id">
+
 							<div class="cart-button">
 								<button type="submit" class="btn btn-outline-info ">Mua &nbsp;<i class="fas fa-cart-plus"></i>
 								</button>
 								<button type="button" class="btn btn-outline-danger">Thêm vào danh sách yêu thích<i class="fas fa-heart"></i></button>
 							</div>							
+							<div id="quantity-mess1" class="err-message">Tối đa chỉ 5 sản phẩm. Bạn vui lòng lại!</div>
+							<div id="quantity-mess2" class="err-message">Chỉ được nhập vào số!. Bạn vui lòng lại!</div>							
 						</div>
 						<div class="promotion-ofer">
 							<span class="promotion-text"><strong>Chương trình khuyến mãi:</strong></span> &nbsp; 
@@ -380,7 +384,6 @@
 			</div>
 		</div>
 		<!--Tạo thông tin & mô tả sản phẩm, bình luận và đánh giá  -->
-		<div class="col-sm bg-light">
 			<div class="row tab">
 				<button class="col-sm col-md col-lg tab-button" id="default" onclick="showTab(event,'description')" >Thông tin chi tiết</button>
 				<button class="col-sm col-md col-lg tab-button" onclick="showTab(event,'comment')">Bình luận</button>
@@ -464,7 +467,7 @@
 							<i class="fas fa-star "></i>
 							<i class="fas fa-star "></i>
 							<i class="fas fa-star "></i>
-							Tạm ổn
+							chuối vl!
 						</span>
 						<span class="detail">xem thêm</span>
 					</div>
@@ -479,9 +482,7 @@
 					  <li class="page-item"><a class="page-link" href="#">Next</a></li>
 					</ul>
 			</div>
-
 			<div class="tab-content tab-content3" id="review"></div>				
-		</div>
 		<div class="row title-row">
 			<div class="col-sm">
 				<div class="horizontal-line">

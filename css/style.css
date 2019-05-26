@@ -506,6 +506,9 @@
 /*begin trangchitietsanpham */
 
 /*begin left slideshow galerry*/
+.product-slideshow {
+    background-color: #f2f3f4;
+}
 .slideImg {
     width: 100%;
 }
@@ -527,7 +530,7 @@
 }
 .galerryItem {
     cursor: pointer;
-    opacity: 0.8;
+    opacity: 0.3;
 }
 .active, .galerryItem:hover {
     opacity: 1;
@@ -563,7 +566,7 @@
     font-weight: 800;
 }
 .product-infomation {
-    height: 415px;
+    height: 440px;
     line-height: 26px;    
 }
 .product-infomation .status {
@@ -755,3 +758,11 @@
     user-select: none;
 }
 /*end trangchitietsanpham*/
+
+/*Begin css cho Form*/
+.err-message {
+    color:red;
+    display: none;
+}
+
+/*End css form*/
