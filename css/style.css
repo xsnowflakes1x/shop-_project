@@ -665,6 +665,7 @@
   background-color: #f1f1f1;
 
 }
+
 .tab-content {
     display: none;
 }
@@ -675,7 +676,10 @@
 .tab-content2 {
     height: 315px;
     background-color: #f1a27491;
+    overflow: scroll; //good
 }
+
+
 .tab-content3 {
     height: 315px;
     background-color: pink;

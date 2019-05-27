@@ -40,6 +40,12 @@ showSlides(index); //khởi tạo giá trị mặc định
 function next(n) {
 	showSlides(index += n);
 }
+//tạo nút next tự động với jquery 
+$(document).ready(function(){
+	setInterval(function(){
+		$("a.next").click();
+	},5000);
+});
 
 function currentSlide(n) {
   showSlides(index = n);

@@ -331,7 +331,7 @@
 							<a href="#">42</a>
 							<a href="#">43</a>
 							<a href="#">44</a>                               
-							<div><b>Tình trạng:</b><span class="status">&nbsp; Còn hàng</span></div>
+							<div><b>Tình trạng:</b><span class="status">&nbsp; <i><ins><b>Còn hàng.</b></ins></i></span></div>
 						</div>
 						<div class="color-list">
 							<b>Màu sắc:</b>
@@ -365,8 +365,9 @@
 						<div class="quantity">
 							<b>Số lượng:</b>
 							<!-- <input type="number" name="quantity" value="" min="1" max="5" class="input-quantity" id="quantity_id"> -->
+							<button type="button" class="btn btn-light"><i class="fas fa-minus-square"></i></button>
 							<input type="text" name="quantity" value="" pattern="^[0-9]\d{0,1}$" title="nhập số dương và tối đa là 2 chữ số " class="input-quantity" id="quantity_id" required>
-
+							<button type="button" class="btn btn-light"><i class="fas fa-plus-square"></i></button>		
 							<div class="cart-button">
 								<button type="submit" class="btn btn-outline-info ">Mua &nbsp;<i class="fas fa-cart-plus"></i>
 								</button>
