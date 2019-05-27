@@ -88,6 +88,7 @@ function showTab(e,id) { //e là event dùng để bắt sự kiện
 
  	//kiểm tra Form validation -- số lượng nhập vào (trong trang chi tiết sp)
  	//Cách 1: dùng Javascript
+
 //  function  checkQuantity() {
 //  		var quant = document.getElementById("quantity_id");
 //  		quant = quant.value;
@@ -103,7 +104,7 @@ function showTab(e,id) { //e là event dùng để bắt sự kiện
 //  					document.getElementById("quantity-err-message1").style.display = '';
 //  					return true;
 //  				}
-//  				else if(quant > 10){
+//  				else if(quant > 5){
 //  					document.getElementById("quantity-err-message1").style.display = 'block';
 //  					return false; 					
 //  				}
@@ -127,6 +128,7 @@ function showTab(e,id) { //e là event dùng để bắt sự kiện
 // }
 	
 	//Cách 2: dùng JQuery
+	
 	//đặt id cho div/span báo lỗi có tên là :quantity-err-message_x
 	//đặt class cho div/span báo lỗi có tên là:err-message
 function checkQuantity() {
@@ -166,4 +168,13 @@ $(document).ready($("#detail_product_form").submit(function(){
 } ));
 
 
-
+//Tạo zoom cho trang chi tiết sản phẩm
+$(document).ready(function(){
+	$('#zoom_id1').zoom();
+	$('#zoom_id2').zoom();
+	$('#zoom_id3').zoom({ on:'grab' });
+	$('#zoom_id4').zoom({ on:'grab' });		
+	// $('#style2').zoom({ on:'grab' });
+	// $('#style3').zoom({ on:'click' });			 
+	// $('#style4').zoom({ on:'toggle' });
+});

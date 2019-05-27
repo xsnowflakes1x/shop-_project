@@ -525,6 +525,7 @@
     position: absolute;
     top: 44%;
     opacity: 0.1;
+    z-index: 1;
 }
 .pre:hover, .next:hover {
     cursor: pointer;
@@ -759,12 +760,44 @@
     color: #ffe52ef0;
     user-select: none;
 }
-/*end trangchitietsanpham*/
+
 
 /*Begin css cho Form*/
 .err-message {
     color:red;
     display: none;
 }
-
 /*End css form*/
+
+/*Begin jQuery Zoom_css */
+        * { border:0; margin:0; padding:0; }
+
+        .zoom {
+
+            position: relative;
+        }
+        
+        /* magnifying glass icon - */
+        .zoom:after {
+            content:'';
+            display:block; 
+            width:33px; 
+            height:33px; 
+            position:absolute; 
+            top:0;
+            right:0;
+            background:url(../image/magnifying-glass-icon.png);
+        }
+
+        .zoom img {
+            display: block;
+        }
+
+        .zoom img::selection { background-color: transparent; }
+
+        #style2 img:hover { cursor: url(grab.cur), default; }
+        #style2 img:active { cursor: url(grabbed.cur), default; }
+/*End jQuery Zoom_css */
+
+
+/*end trangchitietsanpham*/
