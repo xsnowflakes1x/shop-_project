@@ -47,12 +47,15 @@ $(document).ready(function(){
 	},5000);
 });
 
+
+
+
 function currentSlide(n) {
   showSlides(index = n);
 }
 
 function showSlides(n) { //n vừa nhận giá trị index vừa nhận giá trị -1 /1 của hàm next
-	var slides = document.getElementsByClassName('slidesInBox'); //biến slides chứa các slide
+	var slides = document.getElementsByClassName('slidesInBox'); //biến slides chứa các
 	var activeImg = document.getElementsByClassName('galerryItem'); //biến chứa các hình con chưa được active
 	var i;
 	for (i = 0; i < slides.length; i++) {
@@ -158,11 +161,12 @@ function checkQuantity() {
  				}
  		}
 }
-$(document).ready($("input:text").keyup(function(){
+//tạo sự kiện keyup cho ô nhập số lượng
+$(document).ready($("input:text").keyup(function() {
 	checkQuantity();
 }));
 
-$(document).ready($("#detail_product_form").submit(function(){
+$(document).ready($("#detail_product_form").submit(function() {
 	if(checkQuantity()==true) {
 			alert("Thành công!");
 			return true;
@@ -175,7 +179,7 @@ $(document).ready($("#detail_product_form").submit(function(){
 
 
 //Tạo zoom cho trang chi tiết sản phẩm
-$(document).ready(function(){
+$(document).ready(function() {
 	$('#zoom_id1').zoom();
 	$('#zoom_id2').zoom();
 	$('#zoom_id3').zoom({ on:'grab' });
@@ -184,3 +188,24 @@ $(document).ready(function(){
 	// $('#style3').zoom({ on:'click' });			 
 	// $('#style4').zoom({ on:'toggle' });
 });
+
+//Tạo nút tăng giảm số lượng 
+
+var count = 0;
+$(document).ready(function() {
+	$("#plus_button").click(function() {
+		count += 1;
+		$(".quantity input:text").val(count);
+		checkQuantity();
+	});
+});
+
+$(document).ready(function() {
+	$("#minus_button").click(function() {
+		count -= 1;
+		$(".quantity input:text").val(count);
+			checkQuantity();
+	});
+});
+//sự kiện click = mouseup + mousedown?  
+
