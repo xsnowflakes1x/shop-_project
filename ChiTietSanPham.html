@@ -311,7 +311,7 @@
 			</div>
 			<div class="col-sm-12 col-md-12 col-lg-7 bg-light product-info"> 
 				<div class="product-infomation shadow p-4 mb-4 bg-white">
-					<form name="detail_product_form"class="cart-form" action="TrangGioHang.html">
+					<form name="detail_product_form" id="detail_product_form" class="cart-form" action="TrangGioHang.html">
 						<div class="product-content">
 							<h3 class="productName">Giầy thể thao</h3>
 							<h4>AIR JORDAN</h4>
@@ -365,15 +365,15 @@
 						<div class="quantity">
 							<b>Số lượng:</b>
 							<!-- <input type="number" name="quantity" value="" min="1" max="5" class="input-quantity" id="quantity_id"> -->
-							<input type="text" name="quantity" value="" pattern="^[0-9]\d{0,1}$" title="tối đa 2 chữ số" class="input-quantity" id="quantity_id">
+							<input type="text" name="quantity" value="" pattern="^[0-9]\d{0,1}$" title="nhập số dương và tối đa là 2 chữ số " class="input-quantity" id="quantity_id" required>
 
 							<div class="cart-button">
 								<button type="submit" class="btn btn-outline-info ">Mua &nbsp;<i class="fas fa-cart-plus"></i>
 								</button>
 								<button type="button" class="btn btn-outline-danger">Thêm vào danh sách yêu thích<i class="fas fa-heart"></i></button>
 							</div>							
-							<div id="quantity-mess1" class="err-message">Tối đa chỉ 5 sản phẩm. Bạn vui lòng lại!</div>
-							<div id="quantity-mess2" class="err-message">Chỉ được nhập vào số!. Bạn vui lòng lại!</div>							
+							<div id="quantity-err-message1" class="err-message">Tối đa chỉ 10 sản phẩm. Bạn vui lòng lại!</div>
+							<div id="quantity-err-message2" class="err-message">Chỉ cho phép nhập số!. Bạn vui lòng lại!</div>							
 						</div>
 						<div class="promotion-ofer">
 							<span class="promotion-text"><strong>Chương trình khuyến mãi:</strong></span> &nbsp; 

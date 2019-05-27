@@ -71,8 +71,7 @@ function showTab(e,id) { //e là event dùng để bắt sự kiện
 	var tabButton = document.getElementsByClassName("tab-button"); // lấy tên class của button 
 	var tabContent = document.getElementsByClassName("tab-content");// lấy tên class của content  
 	var i;
-	//off active
-	for(i = 0; i < tabButton.length; i++) {
+	for(i = 0; i < tabButton.length; i++) {	//off active
 		tabButton[i].className = tabButton[i].className.replace(" active","");
 	}
 	//none content
@@ -89,82 +88,82 @@ function showTab(e,id) { //e là event dùng để bắt sự kiện
 
  	//kiểm tra Form validation -- số lượng nhập vào (trong trang chi tiết sp)
  	//Cách 1: dùng Javascript
- function  checkQuantity() {
- 		var quant = document.getElementById("quantity_id");
- 		quant = quant.value;
- 		if (isNaN(quant) == true) { //kiểm tra có nhập bậy hay ko ví dụ: 20abc
- 			document.getElementById("quantity-mess2").style.display = 'block';
- 			document.getElementById("quantity-mess1").style.display = '';
- 			return false;
- 		}
- 		else {
- 			document.getElementById("quantity-mess2").style.display = '';
- 			quant = parseInt(quant);
- 				if(quant <= 5) {
- 					document.getElementById("quantity-mess1").style.display = '';
- 					return true;
- 				}
- 				else {
- 					document.getElementById("quantity-mess1").style.display = 'block';
- 					return false; 					
- 				}
- 		}
- 	}
-document.getElementById("quantity_id").onkeyup = checkQuantity;
-document.detail_product_form.onsubmit = submitDetailProduct;
-function submitDetailProduct() {
-	if(checkQuantity()==true) {
-		alert("Thành công!");
-		return true;
-	}
-	else {
-		alert("Thất bại.");
-		return false;
-	}
-}
-	
-	//Cách 2: dùng JQuery
-// $(document).ready(function() {
-//  		var quant = $("#quantity_id");
-//  		quant = quant.val();
+//  function  checkQuantity() {
+//  		var quant = document.getElementById("quantity_id");
+//  		quant = quant.value;
 //  		if (isNaN(quant) == true) { //kiểm tra có nhập bậy hay ko ví dụ: 20abc
-//  			$(".quantity-mess2").show();
-//  			$(".quantity-mess1").hide();
+//  			document.getElementById("quantity-err-message2").style.display = 'block';
+//  			document.getElementById("quantity-err-message1").style.display = '';
 //  			return false;
 //  		}
 //  		else {
-//  			$(".quantity-mess2").style.display = '';
+//  			document.getElementById("quantity-err-message2").style.display = '';
 //  			quant = parseInt(quant);
-//  				if(quant <= 5) {
-//  					$(".quantity-mess1").hide();
+//  				if(quant <= 10) {
+//  					document.getElementById("quantity-err-message1").style.display = '';
 //  					return true;
 //  				}
+//  				else if(quant > 10){
+//  					document.getElementById("quantity-err-message1").style.display = 'block';
+//  					return false; 					
+//  				}
 //  				else {
-//  					$(".quantity-mess1").show();
+//  					document.getElementById("quantity-err-message1").style.display = '';
 //  					return false; 					
 //  				}
 //  		}
-//  	});
-
-// $(document).ready(function() {
-// 	if(checkQuantity()==true) {
-// 		alert("Thành công!");
-// 		return true;
-// 	}
-// 	else {
-// 		alert("Thất bại.");
-// 		return false;
-// 	}
-// }
-// );
-// document.detail_product_form.onsubmit =  $(document).ready(submitDetailProduct);
+//  	}
+// document.getElementById("quantity_id").onkeyup = checkQuantity;
+// document.detail_product_form.onsubmit = submitDetailProduct;
 // function submitDetailProduct() {
 // 	if(checkQuantity()==true) {
 // 		alert("Thành công!");
 // 		return true;
 // 	}
 // 	else {
-// 		alert("Thất bại.");
+// 		alert("Thất bại. Vui lòng kiểm tra lại ô nhập số lượng");
 // 		return false;
 // 	}
 // }
+	
+	//Cách 2: dùng JQuery
+	//đặt id cho div/span báo lỗi có tên là :quantity-err-message_x
+	//đặt class cho div/span báo lỗi có tên là:err-message
+function checkQuantity() {
+	var quant = $("#quantity_id").val(); // $("input:text").val();
+
+ 		if (isNaN(quant) == true) { //kiểm tra có nhập bậy hay ko ví dụ: 20abc
+ 			$("#quantity-err-message2").show();
+ 			$("#quantity-err-message1").hide();
+ 			return false;
+ 		}
+ 		else {
+ 			$("#quantity-err-message2").hide();
+ 			quant = parseInt(quant);
+ 				if(quant <= 10) {
+ 					$("#quantity-err-message1").hide();
+ 					return true;
+ 				}
+ 				else {
+ 					$("#quantity-err-message1").show();
+ 					return false; 					
+ 				}
+ 		}
+}
+$(document).ready($("input:text").keyup(function(){
+	checkQuantity();
+}));
+
+$(document).ready($("#detail_product_form").submit(function(){
+	if(checkQuantity()==true) {
+			alert("Thành công!");
+			return true;
+		}
+		else {
+			alert("Thất bại. Vui lòng kiểm tra lại ô nhập số lượng");
+			return false;
+		}
+} ));
+
+
+

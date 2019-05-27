@@ -306,11 +306,13 @@
     background: rgba(0, 0, 0, 0.3);
     color: #f1f1f1;
     width: 35%;
-    transition: .5s ease;
+    transition: .4s ease;
+    transition-delay: .4s;
     opacity: 0;
     color: white;
     text-align: center;
     left: 33%;
+    box-shadow: 0px 3px 3px #7f7979a3;
 }
 .card-img:hover .overlay {
     opacity: 1;
