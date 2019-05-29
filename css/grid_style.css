@@ -134,3 +134,28 @@
 
 
 /*End flexbox*/
+.row-title-cart {
+	height: 30px;
+}
+.cart-box {
+	height: 500px;
+	background-color: #ced5d3;
+}
+.row-cart image {
+	
+}
+
+.title-cart-box,.top-cart-box {
+	height: 150px;
+	background-color: #eaeae1;
+	border: 1px solid black;
+}
+.bot-left-cart-box {
+	height: 250px;	
+	background-color: #f47373;
+}
+
+.bot-right-cart-box {
+	height: 250px;
+	background-color: #a6e496;
+}

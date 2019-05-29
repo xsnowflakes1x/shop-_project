@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    border:0;
     font-weight: 500;    
 }
 /*Ko để trùng code -> gây lỗi*/
@@ -626,6 +627,8 @@
     border-radius: 4px;
     width: 10%;
     height: 43px;
+    text-align: center;
+    font-weight: 600;    
 }
 .cart-form  .cart-button {
     display:inline-block;
@@ -766,7 +769,9 @@
 }
 
 
-/*Begin css cho Form*/
+/*Begin css cho Form trang chi tiet san pham*/
+
+
 .err-message {
     color:red;
     display: none;
@@ -774,7 +779,7 @@
 /*End css form*/
 
 /*Begin jQuery Zoom_css */
-        * { border:0; margin:0; padding:0; }
+
 
         .zoom {
 
@@ -802,6 +807,53 @@
         #style2 img:hover { cursor: url(grab.cur), default; }
         #style2 img:active { cursor: url(grabbed.cur), default; }
 /*End jQuery Zoom_css */
-
-
 /*end trangchitietsanpham*/
+
+/*begin tranggiohang*/
+.header-cart {
+    background-color: yellowgreen;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.cart-box h5 {
+    text-align: center;
+    font-weight: 400;    
+}
+
+.product-content .product-image {
+    height: 125px;
+    width: auto;
+    background-color: pink;
+    margin: auto;
+    margin-top: 12px;    
+}
+.details h6 {
+    text-align: center;
+}
+.product-quantity button {
+
+    margin: auto;    
+}
+.product-quantity input[name=quantity] {
+    padding: 10px;
+    width: 37%;
+    margin: auto;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;    
+    color: #43484D;
+}
+.product-content .product-quantity {
+    margin-top: 30%;
+}
+.product-remove {
+    margin-top: 45%;    
+}
+.product-remove button {
+    width: 100%;
+}
+
+
+/*end tranggiohang*/

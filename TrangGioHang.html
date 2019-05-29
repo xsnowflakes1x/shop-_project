@@ -1,5 +1,3 @@
-<!-- trang giỏ hàng -->
-<!--Trang nhập--> 
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -8,61 +6,336 @@
 	<title>Trang giỏ hàng</title>
 	<link rel="icon" href="image/heel-icon.png">
 	<link rel="stylesheet" href="css/grid_style.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="css/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+
+	<!-- CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<!-- End CDN -->
+
 </head>
 <body>
 	<div class="container">
 		<!-- begin header -->
 		<header>
 			<div class="top-header">
-				<div class="row">
-					<div class="col-sm-4 bg-danger">
-						<div class="left-logo">logo</div>
+				<div class="row top-header-row">
+					<div class="col col-sm-6 col-md-4">
+						<div class="left-logo"><img src="image/girl-shoe-logo.png" alt="shoe-logo" class="img-fluid img-logo"></div>
 					</div>
-					<div class="col-sm-3 bg-warning">
-						<div class="center-banner">banner</div>
+					<div class="col-12 col-sm-6 col-md-3">
+						<div class="center-banner"><img src="image/sale.png" alt="shoe-logo" class="img-fluid banner-img"></div>
 					</div>
-					<div class="col-sm-5 bg-danger" class="right-section">
-						<div class="right-section">section</div>
+					<div class="col-sm-12 col-md-5 right-section">
+						<div class="right-section">
+							<div class="top-flex-containner">
+								<a href="#"><div class="top-item item1"></div></a>  
+								<a href="#"><div class="top-item item2"></div></a> 
+								<a href="#"><div class="top-item item3"></div></a>  
+								<a href="#"><div class="top-item item4"></div></a>  
+							</div>
+							<div class="center-flex-containner">
+								<div  class="center-item">
+
+								</div>
+							</div>
+							<div class="bot-flex-containner">
+								<div class="bot-item"><a href="#" class="item-link"><i class="fas fa-phone-square fa-flip-horizontal"></i><b>0903378888</b></a></div>
+								<div class="bot-item"><a href="#" class="item-link"><i class="fas fa-user"></i><b>Tài Khoản</b></a></div>
+								<div class="bot-item"><a href="#" class="item-link"><i class="fas fa-shopping-cart"></i><b>Giỏ Hàng</b><span class="count">&nbsp;<b>(0)</b></span></a></div>								
+							</div>
+							<div class="center-flex-containner">
+								<div class="center-item">
+
+								</div>
+							</div>							
+						</div>
 					</div>
 				</div>			
 			</div>
 			<div class="bot-header">
-				<div class="row bot-header-row">
-					<div class="col-sm col-md-6 bg-success">
-						<div class="menu">menu</div>
-					</div>
+				<div class="row bot-header-row bg-dark">
+					<div class="col-sm-12 col-md-7 col-lg-7 ">
+						<div class="menu menu-text ">
+							<!-- Tạo thanh navbar dùng bootstrap-->
+							<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+								<a class="navbar-brand" href="Index.html">&nbsp;<i class="fas fa-home"></i>&nbsp;</a>
+								<!-- Tạo nút button -->
+								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+									<span class="navbar-toggler-icon"></span>
+								</button>
 
-					<div class="col-sm col-md-6 bg-dark">
-						<div class="search">search</div>
+								<!-- Tạo collapse - Sập lại khi giao diện co lại -->
+								<div class="collapse navbar-collapse" id="collapsibleNavbar">
+									<!-- Tạo thanh navbar ngang-->
+									<ul class="navbar-nav">
+										<!-- Giày nam -->
+										<li class="nav-item parent-li-menu"><a href="#" class="nav-link nav">Giày nam &nbsp;<i class="fas fa-male"></i></a>
+											<!-- flex-column để các phần tử hiển thị theo chiều dọc -->
+											<!-- Tạo menu cấp 1 -->
+											<ul class="navbar-nav flex-column rank1-ul-menu">
+												<li class="nav-item rank1-li-menu"><a href="#" class="nav-link">Giày thể thao</a>
+													<!-- Tạo menu cấp 2 -->
+													<div class="rank2-menu">
+														<ul class="navbar-nav flex-column rank2-ul-menu">
+															<li class=" nav-item rank2-li-menu"><a href="#" class="nav-link">mới </a>
+																<!-- Tạo menu cấp 3 -->
+																<div class="rank3-menu">
+																	<ul class="navbar-nav flex-column rank3-ul-menu">
+																		<li class=" nav-item rank3-li-menu"><a href="#" class="nav-link">cháu </a></li>
+																		<li class="baby-liMenu"><a href="#" class="nav-link">cháu</a></li>
+																		<li class="baby-liMenu"><a href="#" class="nav-link">cháu</a></li>
+																	</ul>												
+																</div>
+															</li>
+															<li class=" nav-item rank2-li-menu"><a href="#" class="nav-link">mới </a>
+																<!-- Tạo menu cấp 3 -->
+																<div class="rank3-menu">
+																	<ul class="navbar-nav flex-column rank3-ul-menu">
+																		<li class=" nav-item rank3-li-menu"><a href="#" class="nav-link">cháu22 </a></li>
+																		<li class="baby-liMenu"><a href="#" class="nav-link">cháu22</a></li>
+																		<li class="baby-liMenu"><a href="#" class="nav-link">cháu22</a></li>
+																	</ul>							
+																</div>								
+															</li>
+															<li class=" nav-item rank2-li-menu"><a href="#" class="nav-link">mới </a>
+																<div class="rank3-menu">
+																	<ul class="navbar-nav flex-column rank3-ul-menu">
+																		<li class=" nav-item rank3-li-menu"><a href="#" class="nav-link">cháu333 </a></li>
+																		<li class="baby-liMenu"><a href="#" class="nav-link">cháu333</a></li>
+																		<li class="baby-liMenu"><a href="#" class="nav-link">cháu333</a></li>
+																	</ul>												
+																</div>		
+															</li>
+														</ul>										
+													</div>
+												</li>
+												<li class="nav-item rank1-li-menu"><a href="#" class="nav-link">Giày lười </a>
+													<div class="rank2-menu">
+														<ul class="navbar-nav flex-column rank2-ul-menu">
+															<li class=" nav-item rank2-li-menu"><a href="#" class="nav-link">mới2 </a>
+															</li>
+															<li class="child2-liMenu"><a href="#" class="nav-link">mới2 </a>
+															</li>
+															<li class="child2-liMenu"><a href="#" class="nav-link">mới2 </a></li>
+														</ul>												
+													</div>
+												</li>
+												<li class="nav-item rank1-li-menu"><a href="#" class="nav-link">Giày boots</a>
+													<div class="rank2-menu">
+														<ul class="navbar-nav flex-column rank2-ul-menu">
+															<li class=" nav-item rank2-li-menu"><a href="#" class="nav-link">mới3 </a>
+															</li>
+															<li class="child2-liMenu"><a href="#" class="nav-link">mới3 </a>
+															</li>
+															<li class="child2-liMenu"><a href="#" class="nav-link">mới3 </a></li>
+														</ul>												
+													</div>												
+												</li>
+												<li class="nav-item rank1-li-menu"><a href="#" class="nav-link">Giày dép</a>
+
+												</li>
+											</ul>
+										</li>
+										<!-- End Giày nam -->										
+										<li class="nav-item parent-li-menu"><a href="#" class="nav-link">Giày nữ &nbsp;<i class="fas fa-female"></i></a>
+											<!-- Tạo menu cấp 1 -->
+											<ul class="navbar-nav flex-column rank1-ul-menu">
+												<li class="nav-item rank1-li-menu"><a href="#" class="nav-link">Giày thể thao</a>
+													<!-- Tạo menu cấp 2 -->
+													<div class="rank2-menu">
+														<ul class="navbar-nav flex-column rank2-ul-menu">
+															<li class=" nav-item rank2-li-menu"><a href="#" class="nav-link">mới </a>
+																<!-- Tạo menu cấp 3 -->
+																<div class="rank3-menu">
+																	<ul class="navbar-nav flex-column rank3-ul-menu">
+																		<li class=" nav-item rank3-li-menu"><a href="#" class="nav-link">cháu </a></li>
+																		<li class="baby-liMenu"><a href="#" class="nav-link">cháu</a></li>
+																		<li class="baby-liMenu"><a href="#" class="nav-link">cháu</a></li>
+																	</ul>												
+																</div>
+															</li>
+															<li class=" nav-item rank2-li-menu"><a href="#" class="nav-link">mới2 </a>
+																<!-- Tạo menu cấp 3 -->
+																<div class="rank3-menu">
+																	<ul class="navbar-nav flex-column rank3-ul-menu">
+																		<li class=" nav-item rank3-li-menu"><a href="#" class="nav-link">cháu22 </a></li>
+																		<li class="baby-liMenu"><a href="#" class="nav-link">cháu22</a></li>
+																		<li class="baby-liMenu"><a href="#" class="nav-link">cháu22</a></li>
+																	</ul>												
+																</div>																
+															</li>
+															<li class=" nav-item rank2-li-menu"><a href="#" class="nav-link">mới </a>
+																<div class="rank3-menu">
+																	<ul class="navbar-nav flex-column rank3-ul-menu">
+																		<li class=" nav-item rank3-li-menu"><a href="#" class="nav-link">cháu333 </a></li>
+																		<li class="baby-liMenu"><a href="#" class="nav-link">cháu333</a></li>
+																		<li class="baby-liMenu"><a href="#" class="nav-link">cháu333</a></li>
+																	</ul>												
+																</div>		
+															</li>
+														</ul>												
+													</div>
+
+												</li>
+												<li class="nav-item rank1-li-menu"><a href="#" class="nav-link">Giày lười </a>
+													<div class="rank2-menu">
+														<ul class="navbar-nav flex-column rank2-ul-menu">
+															<li class=" nav-item rank2-li-menu"><a href="#" class="nav-link">mới </a>
+															</li>
+															<li class="child2-liMenu"><a href="#" class="nav-link">mới2 </a>
+															</li>
+															<li class="child2-liMenu"><a href="#" class="nav-link">mới </a></li>
+														</ul>												
+													</div>
+												</li>
+												<li class="nav-item rank1-li-menu"><a href="#" class="nav-link">Giày boots</a>
+													<div class="rank2-menu">
+														<ul class="navbar-nav flex-column rank2-ul-menu">
+															<li class=" nav-item rank2-li-menu"><a href="#" class="nav-link">mới </a>
+															</li>
+															<li class="child2-liMenu"><a href="#" class="nav-link">mới2 </a>
+															</li>
+															<li class="child2-liMenu"><a href="#" class="nav-link">mới </a></li>
+														</ul>												
+													</div>												
+												</li>
+												<li class="nav-item rank1-li-menu"><a href="#" class="nav-link">Giày dép</a>
+
+												</li>
+											</ul>
+										</li>
+
+										<!-- Giầy trẻ em -->
+										<li class="nav-item parent-li-menu"><a href="#" class="nav-link">Giày trẻ em &nbsp;<i class="fas fa-child fa-xs"></i></a>
+											<ul class="navbar-nav flex-column rank1-ul-menu">
+												<li class="nav-item rank1-li-menu"><a href="#" class="nav-link">Giày thể thao</a>
+													<!-- Tạo menu cấp 2 -->
+													<div class="rank2-menu">
+														<ul class="navbar-nav flex-column rank2-ul-menu">
+															<li class=" nav-item rank2-li-menu"><a href="#" class="nav-link">mới </a>
+															</li>
+															<li class=" nav-item rank2-li-menu"><a href="#" class="nav-link">mới2 </a>
+
+															</li>
+															<li class=" nav-item rank2-li-menu"><a href="#" class="nav-link">mới </a>
+
+															</li>
+														</ul>												
+													</div>
+
+												</li>
+												<li class="nav-item rank1-li-menu"><a href="#" class="nav-link">Giày lười </a>
+												</li>
+												<li class="nav-item rank1-li-menu"><a href="#" class="nav-link">Giày dép</a>
+												</li>
+											</ul>
+										</li>
+										<!-- Tạo dropdown -->
+										<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">Nhiều hơn</a>
+											<div class="dropdown-menu">
+												<a class="dropdown-item" href="#">Giày thể thao</a>
+												<a class="dropdown-item" href="#">Giày cao gót</a>
+												<a class="dropdown-item" href="#">Giày lườ<i></i></a>
+											</div>											
+										</li>
+									</ul>
+								</div> 
+							</nav>							
+						</div>
+					</div>
+					<div class="col-sm-12 col-md col-lg">
+						<div class="search search-margin-top">
+							<form class="" action="#">
+								<input type="text" placeholder="Search..." name="search">
+								<button type="submit"><i class="fa fa-search"></i></button>
+							</form>
+						</div>
 					</div>
 				</div>				
 			</div>
-		</header>
+		</header>		
 		<!-- end header -->
-		<!-- begin cart -->
-		<div class="row Sign-In-row"> 
-			<div class="col bg-warning"> 
-				<div class="product-image">Cart</div>
+		<!-- begin body -->
+		<!-- tạo breadcum cho trang chi tiết sp -->
+		<div class="row breadcrumb-row">
+			<div class="col-sm bg-secondary">
+				<div class="bread_crumb">
+					<nav class="breadcrumb bg-light">
+						<a class="breadcrumb-item" href="Index.html">Trang chủ</a>
+						<span class="breadcrumb-item active">Trang giỏ hàng</span>
+					</nav>
+				</div>
 			</div>
 		</div>
-		<!-- end body -->
-		<!-- begin cart -->
-		<footer>
-			<div class="row top-footer-row">
-				<div class="col-sm bg-primary">
-					<div class="top-footer">footer</div>
+		<div class="cart-box">
+			<div class="row header-cart">Giỏ hàng</div>
+			<div class="row row-title-cart">
+				<div class="col-2 col-sm-2 col-md-2 col-lg-2 title-cart-box"><h5>Hình ảnh</h5></div>
+				<div class="col-4 col-sm-4 col-md-4 col-lg-4 title-cart-box"><h5>Tên sản phẩm</h5></div>
+				<div class="col-2 col-sm-2 col-md-2 col-lg-2 title-cart-box"><h5>Số lượng</h5></div>
+				<div class="col-1 col-sm-1 col-md-1 col-lg-1 title-cart-box"><h5>Xóa</h5></div>
+				<div class="col-3 col-sm-3 col-md-3 col-lg-3 title-cart-box"><h5>Đơn giá</h5></div>	
+			</div>			
+			<div class="row product-content">
+				<div class="col-2 col-sm-2 col-md-2 col-lg-2 top-cart-box">
+					<div class="product-image"></div>
 				</div>
-			
+				<div class="col-4 col-sm-4 col-md-4 col-lg-4 top-cart-box">
+					<div class="details">
+						<h6>AIR JORDAN</h6>
+						<p>Nguồn gốc:	Hàng chính hãng</p>
+						<p>Hãng sản xuất:	Adias</p>
+						<p>Kích cỡ:	39-45</p>
+						<p>Tình trạng:	Mới 100%, Full box</p>
+					</div>
+				</div>
+				<div class="col-2 col-sm-2 col-md-2 col-lg-2 top-cart-box">
+					<div class="product-quantity">
+						<button type="button" class="btn btn-light" id="minus_button"><i class="fas fa-minus-square fa-lg"></i></button>
+						<input type="text" name="quantity" value="0" pattern="^[1-9]\d{0,1}$" title="nhập số dương và tối đa là 2 chữ số " class="input-quantity" id="quantity_id" required>
+						<button type="button" class="btn btn-light" id="plus_button"><i class="fas fa-plus-square fa-lg"></i></button>							
+					</div>
+				</div>
+				<div class="col-1 col-sm-1 col-md-1 col-lg-1 top-cart-box">
+					<div class="product-remove">
+						<button type="button" class="btn btn-danger">Xóa <i class="fas fa-trash-alt"></i></button>
+					</div>
+				</div>
+				<div class="col-3 col-sm-3 col-md-3 col-lg-3 top-cart-box">
+					<div class="product-price">
+						<h2>7.500.000</h2>
+					</div>
+				</div>					
 			</div>
-			<div class="row bot-footer-row">
-				<div class="col-sm bg-secondary">
-					<div class="bot-footer">footer-© 2019 Shoes Shop. All rights reserved | Design by Team15 </div>
+			<div class="row row-bot-cart">
+				<div class="col-12 col-sm-7 col-md-7 col-lg-7 bot-left-cart-box"></div>
+				<div class="col-12 col-sm-5 col-md-5 col-lg-5 bot-right-cart-box"></div>		
+			</div>			
+		</div>
+		<!-- begin footer -->
+		<footer>
+			<div class="jumbotron jumbotron-fluid">
+				<div class="container">
+					<p class="about">
+						<a href="/" class="link"><i class="fa fa-home"></i>Home</a> 
+						| <a href="#" class="link">About</a> 
+						| <a href="/" class="link">Contact</a> 
+						| <a href="#" class="link" >Terms&nbsp;of&nbsp;Use</a> 
+						| <a href="#" class="link">Privacy&nbsp;Policy</a>
+					</p>
+					<h5 class="rights-text">© 2019 Shoes Shop. All rights reserved | Design by Team 15A</h5> 
 				</div>
-			</div>					
+			</div>
 		</footer>
 		<!-- end footer -->
 	</div>
+	<script src="javascript/javascript.js"></script>
+
 </body>
 </html>
+

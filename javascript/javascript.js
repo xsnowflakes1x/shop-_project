@@ -151,12 +151,14 @@ function checkQuantity() {
  		else {
  			$("#quantity-err-message2").hide();
  			quant = parseInt(quant);
- 				if(quant <= 10) {
+ 				if(quant <= 10 && quant >=0) {
  					$("#quantity-err-message1").hide();
- 					return true;
+					$(".quantity input[name=quantity]").css("border", "initial"); 							
+ 		 					return true;
  				}
  				else {
  					$("#quantity-err-message1").show();
+					$(".quantity input[name=quantity]").css("border", "1px solid red");
  					return false; 					
  				}
  		}
