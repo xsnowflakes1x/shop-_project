@@ -4,6 +4,9 @@
     border:0;
     font-weight: 500;    
 }
+.btn{
+    font-weight: 600;
+}
 /*Ko để trùng code -> gây lỗi*/
 
 /*Fix lỗi menu bằng z-index*/
@@ -98,7 +101,7 @@
         /*Chỉnh link*/
         a:link {
             text-decoration: none;
-            transition-duration: 1s;
+            transition-duration: .7s;
         }
         .right-section a:visited {
             color: black;
@@ -140,11 +143,9 @@
             transition: width 0.4s ease-in-out;
             width: 60px;
             border:2px solid #17a2b8;
-            border-radius: 10px;
             width: 86%;
         }
-        input[type=text]:focus {
-            border-radius: 10px;
+        .search input[type=text]:focus {
             border:2px solid #17a2b8;
             width: 86%;
         }
@@ -152,10 +153,12 @@
             border:2px solid #17a2b8;
             border-radius: 10px;
             background-color: white;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;            
         }
         .search button[type=submit]:hover {
             border:2px solid #607d8b;
-            border-radius: 10px;
             background-color: white;
         }
 
@@ -170,11 +173,6 @@
         margin: auto;
         height: auto;
     }
-    .row {
-        display: flex;
-        justify-content: center;
-    }
-
 
 /*End body*/
 
@@ -605,7 +603,11 @@
     padding: 0 5px;
     font-size: 13px;
 }
-.size-list>a:hover, .size-list>a.active {
+.size-list>a:focus {
+    border-color: #ddd;
+    background: #ff070761;   
+}
+.size-list>a:hover, .size-list>a.active  {
     color: #000;
     border-color: #ddd;
     background: #ff070761;
@@ -616,6 +618,14 @@
     padding: 0px 10px;
     width: auto;
 }
+.color-list-ul >.color-list-li:hover {
+    background-color: #bbb9ce;
+    border-radius: 2px;
+}
+.color-list-li>a:focus {
+    border-radius: 10rem;
+    box-shadow: 0px 1px 7px red;
+}
 .color-list-ul {
     border: 1px solid;
     border-radius: 4px;
@@ -625,7 +635,7 @@
     padding: 4px 3px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 10%;
+    width: 8%;
     height: 43px;
     text-align: center;
     font-weight: 600;    
@@ -815,25 +825,43 @@
     font-size: 30px;
     text-transform: uppercase;
     font-weight: 600;
+    justify-content: center;
 }
 .cart-box h5 {
     text-align: center;
     font-weight: 400;    
 }
+.empty-cart {
+    height: 300px;
+    background-color: whitesmoke;    
+}
 
+.empty-cart h1 {
+    color:#515252;
+    text-align: center;
+}
+.product-content .top-cart-box {
+    width: 190px;
+}
+.product-content .quantity {
+    margin-top: 45px;
+}
 .product-content .product-image {
-    height: 125px;
+/*    height: 125px;
     width: auto;
-    background-color: pink;
-    margin: auto;
-    margin-top: 12px;    
+    background-color: pink;*/
+    margin: 10px;   
 }
 .details h6 {
     text-align: center;
 }
+
 .product-quantity button {
 
     margin: auto;    
+}
+.product-quantity input[name=quantity]:focus {
+    outline:0;
 }
 .product-quantity input[name=quantity] {
     padding: 10px;
@@ -845,15 +873,98 @@
     font-weight: 700;    
     color: #43484D;
 }
-.product-content .product-quantity {
-    margin-top: 30%;
+.product-price:after {
+    content:'đồng';
 }
+.product-price {
+    margin-top: 60px;
+    text-align: left;
+    font-weight: 400; 
+    font-size: 20px;
+    font-weight: 500;
+    float: right;
+    padding-right: 20px;
+}     
+.product-content {
+    display: -webkit-box;
+}
+.product-content .product-quantity {
+    margin-top: 26%;
+    margin-left: 10px;
+}
+.product-content .box1 { 
+    width: 190px;
+}
+ .product-content .box2 { 
+    width: 380px;
+}
+.product-content .box3 { 
+    width: 190px;
+}
+.product-content .box4 { 
+    width: 95px;
+}
+.product-content .box5 { 
+    width: 285px;
+}    
 .product-remove {
-    margin-top: 45%;    
+    margin-top: 60%;    
 }
 .product-remove button {
     width: 100%;
 }
+.table-box caption {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    color: black;
+    text-align: left;
+    caption-side: top;
+    font-size: 22px;
+}
 
+.table-box input {
+    text-align: center;
+}
 
+.table-box>table {
+    width: 100%;
+}
+table input{
+    outline:0;
+}
+
+.table-box th {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+.table-box th, tr, td {
+    border: 1px solid black;
+    text-align: center;
+}
+.total-box button {
+    font-weight: 700;
+}
+.total-box {
+    line-height: 45px;
+    font-size: 20px;    
+}
+.total-box .label {
+    color:#aaa;
+    text-align: left;
+}
+.total-box .cost {
+    text-align: right;
+    float: right;
+    padding-right: 20px;
+}
+.total-box .cost:after { 
+    content: ' đồng';
+}
+.total-box .total-item2 {
+    border: 2px solid #edeff1;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;       
+}
 /*end tranggiohang*/

@@ -373,11 +373,12 @@
 								</button>
 								<button type="button" class="btn btn-outline-danger">Thêm vào danh sách yêu thích<i class="fas fa-heart"></i></button>
 							</div>							
-							<div id="quantity-err-message1" class="err-message">Tối đa chỉ 10 sản phẩm. Bạn vui lòng lại!</div>
-							<div id="quantity-err-message2" class="err-message">Chỉ cho phép nhập số!. Bạn vui lòng lại!</div>							
+							<div id="quantity-err-message1" class="err-message">Tối đa chỉ 10 sản phẩm. Bạn vui lòng nhập lại!</div>
+							<div id="quantity-err-message2" class="err-message">Chỉ cho phép nhập số!. Bạn vui lòng nhập lại!</div>
+							<div id="quantity-err-message3" class="err-message">Vui lòng nhập số dương</div>
 						</div>
 						<div class="promotion-ofer">
-							<span class="promotion-text"><strong>Chương trình khuyến mãi:</strong></span> &nbsp; 
+							<span class="promotion-text"><strong>Chương trình khuyến mãi&nbsp;<i class="fas fa-gift"></i></strong></span> &nbsp; 
 							<span class="text">Khuyễn mãi cho tất cả các sản phẩm có đơn hàng giá từ 4 triệu trở lên</span>
 						</div>
 					</form>
@@ -683,7 +684,7 @@
 							<form  method="post">
 								<label >Địa chỉ Email  <span class="asterisk">*</span></label>
 								<div class="box">
-								<input type="email" value="" name="EMAIL" class="required email" placeholder="Nhập email" required pattern="[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,3}" title="abc@xyz.mn">
+								<input type="email" value="" name="email" class="required email" placeholder="Nhập email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+.+.[a-zA-Z]{2,3}" title="abc@xyz.mn">
 								<input type="submit" value="Subscribe" name="subscribe" class="button">	
 								</div>
 								<input type="hidden" name="xxx" value="113">
@@ -701,13 +702,14 @@
 						| <a href="#" class="link" >Terms&nbsp;of&nbsp;Use</a> 
 						| <a href="#" class="link">Privacy&nbsp;Policy</a>
 					</p>
-					<h5 class="rights-text">© 2019 Shoes Shop. All rights reserved | Design by Team 15A</h5> 
+					<h5 class="rights-text">&copy; 2019 Shoes Shop. All rights reserved | Design by Team 15A</h5> 
 				</div>
 			</div>
 		</footer>
 		<!-- end footer -->
 	</div>
 	<script src="javascript/javascript.js"></script>
+	<script src="javascript/chitietsanpham.js"></script>
 	<script src='javascript/jquery.zoom.min.js'></script>
 </body>
 </html>

@@ -272,20 +272,15 @@
 				</div>
 			</div>
 		</div>
-		<div class="cart-box">
-			<div class="row header-cart">Giỏ hàng</div>
-			<div class="row row-title-cart">
-				<div class="col-2 col-sm-2 col-md-2 col-lg-2 title-cart-box"><h5>Hình ảnh</h5></div>
-				<div class="col-4 col-sm-4 col-md-4 col-lg-4 title-cart-box"><h5>Tên sản phẩm</h5></div>
-				<div class="col-2 col-sm-2 col-md-2 col-lg-2 title-cart-box"><h5>Số lượng</h5></div>
-				<div class="col-1 col-sm-1 col-md-1 col-lg-1 title-cart-box"><h5>Xóa</h5></div>
-				<div class="col-3 col-sm-3 col-md-3 col-lg-3 title-cart-box"><h5>Đơn giá</h5></div>	
-			</div>			
-			<div class="row product-content">
-				<div class="col-2 col-sm-2 col-md-2 col-lg-2 top-cart-box">
-					<div class="product-image"></div>
+		<!-- tạo giỏ hàng -->
+		<div class="row header-cart">Giỏ hàng</div>		
+<!-- 		<div class="row product-content table-responsive-xl">
+				<div class=" top-cart-box box1">
+					<div class="product-image">
+						<img src="image/products/cart.png" class="img-thumbnail img-fluid mx-auto d-block" alt="Cinque Terre">
+					</div>
 				</div>
-				<div class="col-4 col-sm-4 col-md-4 col-lg-4 top-cart-box">
+				<div class="top-cart-box box2">
 					<div class="details">
 						<h6>AIR JORDAN</h6>
 						<p>Nguồn gốc:	Hàng chính hãng</p>
@@ -294,29 +289,72 @@
 						<p>Tình trạng:	Mới 100%, Full box</p>
 					</div>
 				</div>
-				<div class="col-2 col-sm-2 col-md-2 col-lg-2 top-cart-box">
-					<div class="product-quantity">
+				<div class="top-cart-box box3">
+					<div class="product-quantity quantity">
 						<button type="button" class="btn btn-light" id="minus_button"><i class="fas fa-minus-square fa-lg"></i></button>
-						<input type="text" name="quantity" value="0" pattern="^[1-9]\d{0,1}$" title="nhập số dương và tối đa là 2 chữ số " class="input-quantity" id="quantity_id" required>
+						<input type="text" name="quantity" value="0" pattern="^[1-9]\d{0,1}$" title="nhập số dương và tối đa là 2 chữ số " class="input-quantity" id="quantity_id" required readonly>
 						<button type="button" class="btn btn-light" id="plus_button"><i class="fas fa-plus-square fa-lg"></i></button>							
 					</div>
 				</div>
-				<div class="col-1 col-sm-1 col-md-1 col-lg-1 top-cart-box">
+				<div class="top-cart-box box4">
 					<div class="product-remove">
 						<button type="button" class="btn btn-danger">Xóa <i class="fas fa-trash-alt"></i></button>
 					</div>
 				</div>
-				<div class="col-3 col-sm-3 col-md-3 col-lg-3 top-cart-box">
+				<div class="top-cart-box box5">
 					<div class="product-price">
-						<h2>7.500.000</h2>
+						7.500.000
 					</div>
 				</div>					
-			</div>
-			<div class="row row-bot-cart">
-				<div class="col-12 col-sm-7 col-md-7 col-lg-7 bot-left-cart-box"></div>
-				<div class="col-12 col-sm-5 col-md-5 col-lg-5 bot-right-cart-box"></div>		
-			</div>			
+		</div> -->
+		<div class="empty-cart">
+			<span class="fa-stack">
+			<i class="fas fa-shopping-basket fa-10x"></i>
+			<i class="fas fa-exclamation"></i>				
+			</span>
+
+			<h1><i class="fas fa-exclamation-circle fa-2x"></i> Giỏ hàng trống</h1>
 		</div>
+			<div class="row row-bot-cart">
+				<div class="col-lg-8 table-box">
+					<div class="table-responsive-xl">
+					 <form action="Index.html" id="form_customer_info" >
+					 	<table>
+							<caption><i class="fas fa-user">Thông tin khách hàng</i></caption>
+							<tbody>
+								<tr>
+									<th>Tên khách hàng</th>
+									<th>Số điện thoại</th>
+									<th>Email</th>
+									<th>Địa chỉ</th>
+								</tr>
+								<tr>
+									
+									<td><input type="text" name="customer" value="Ngô Khá Bảnh" placeholder="Customer" required></td>
+									<td><input type="tel" name="phone" value="0128462598" placeholder="Phone" required></td>
+									<td><input type="email" name="email" value="BanhVN@gmail.com" placeholder="Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+.+.[a-zA-Z]{2,3}" title="abc@xyz.mn"></td>
+									<td><input type="text" name="address" value="Cầu giấy, Hà Nội" placeholder="Address" required></td>
+								
+								</tr>									
+							</tbody>
+							</table>
+						</form>
+					</div>
+				</div>
+				<div class="col-lg-4 total-box">
+					<div class="total-item">
+						<span class="label">Phí vận chuyển:</span>
+						<span class="cost">30.000</span>
+					</div>
+					<div class="total-item2">
+						<span class="label">Tổng tiền:</span>
+						<span class="cost">7.530.000</span>
+					</div>
+					<button type="submit" class="btn btn-outline-success" form='form_customer_info'>Thanh toán &nbsp;<i class="far fa-credit-card"></i></button>
+					
+				</div>		
+			</div>	
+		<!-- End tạo giỏ hàng -->			
 		<!-- begin footer -->
 		<footer>
 			<div class="jumbotron jumbotron-fluid">
@@ -328,7 +366,7 @@
 						| <a href="#" class="link" >Terms&nbsp;of&nbsp;Use</a> 
 						| <a href="#" class="link">Privacy&nbsp;Policy</a>
 					</p>
-					<h5 class="rights-text">© 2019 Shoes Shop. All rights reserved | Design by Team 15A</h5> 
+					<h5 class="rights-text">&copy; 2019 Shoes Shop. All rights reserved | Design by Team 15A</h5> 
 				</div>
 			</div>
 		</footer>
