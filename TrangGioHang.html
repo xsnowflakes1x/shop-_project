@@ -274,10 +274,14 @@
 		</div>
 		<!-- tạo giỏ hàng -->
 		<div class="row header-cart">Giỏ hàng</div>		
-<!-- 		<div class="row product-content table-responsive-xl">
+		<div class="row cart-content table-responsive-xl">
 				<div class=" top-cart-box box1">
 					<div class="product-image">
-						<img src="image/products/cart.png" class="img-thumbnail img-fluid mx-auto d-block" alt="Cinque Terre">
+						<span id="heart-icon6" class="heart-icon" onclick="changeIcon(this)">
+				    	 <i class="far fa-heart fa-lg" ></i>
+				    	 <i class="fas fa-heart fa-lg black-heart-icon "  ></i>
+				    	</span> 
+						<img src="image/products/cart.png" class="img-thumbnail img-fluid" alt="Cinque Terre">
 					</div>
 				</div>
 				<div class="top-cart-box box2">
@@ -298,7 +302,7 @@
 				</div>
 				<div class="top-cart-box box4">
 					<div class="product-remove">
-						<button type="button" class="btn btn-danger">Xóa <i class="fas fa-trash-alt"></i></button>
+						<button type="button" class="btn btn-danger btn-cart-delete" id="btn-cart-id">Xóa <i class="fas fa-trash-alt"></i></button>
 					</div>
 				</div>
 				<div class="top-cart-box box5">
@@ -306,14 +310,23 @@
 						7.500.000
 					</div>
 				</div>					
-		</div> -->
-		<div class="empty-cart">
-			<span class="fa-stack">
-			<i class="fas fa-shopping-basket fa-10x"></i>
-			<i class="fas fa-exclamation"></i>				
-			</span>
-
-			<h1><i class="fas fa-exclamation-circle fa-2x"></i> Giỏ hàng trống</h1>
+		</div>
+		<div class="row">
+			<div class="empty-cart">
+			<i class="fas fa-exclamation-circle fa-5x fa-stack-2x" style="color:Tomato"></i>
+			<i class="fas fa-shopping-basket fa-6x  fa-stack-1x"></i>
+			<h1> Giỏ hàng trống	<i class="fas fa-exclamation"></i></h1>
+			<p>Bạn nhấn vào <a href="Index.html">đây</a> để tiếp tục mua hàng nhé!<i class="far fa-smile-beam fa-1x"></i></p>				
+			</div>	
+		</div>
+		<!-- tạo hộp thoại alert overlay cho nút xóa -->
+		<div class="overlay-box">
+			<div class="alert-box">
+				<i class="fas fa-times fa-1x"></i>
+				<i class="fas fa-exclamation-circle fa-4x" style="color:Tomato"></i>
+				<div class="content" id="alert-content">Bạn có muốn xóa sản phẩm này không?</div>
+				<button type="button" class="btn btn-success btn-confirm">Xác nhận</button>
+			</div>
 		</div>
 			<div class="row row-bot-cart">
 				<div class="col-lg-8 table-box">
@@ -373,7 +386,6 @@
 		<!-- end footer -->
 	</div>
 	<script src="javascript/javascript.js"></script>
-
 </body>
 </html>
 

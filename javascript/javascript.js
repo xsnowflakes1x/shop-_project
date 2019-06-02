@@ -1,3 +1,34 @@
+// hiển thị icon black heart
+function changeIcon(e) { //e là thẻ 
+
+	//lấytoàn bộ tên class (tim trắng)	
+	var selector_class_name = e.querySelector(".far").className;
+
+	//truy cập vô icon tim đen
+	var tim_den_class = e.querySelector(".black-heart-icon"); 
+
+	//truy cập vô icon tim trắng
+	var tim_trang_class = e.querySelector(".far");
+	//lưu querySelector() --> truy xuất vào phần tử đầu tiên
+	
+	//so sanh tên class được lấy 
+	if (selector_class_name == "far fa-heart fa-lg") {
+		
+		tim_trang_class.style.display="none";
+
+		tim_den_class.style.display="inline-block";
+
+		//Đổi tên tạm class emty-heart
+		tim_trang_class.className="far";
+	}
+	else {
+
+		tim_trang_class.style.display="inline-block";
+		tim_den_class.style.display="none";
+		//Gán lại tên cũ cho class emty-heart
+		tim_trang_class.className="far fa-heart fa-lg";		
+	}	
+}	
 
  	//kiểm tra Form validation -- số lượng nhập vào (trong trang chi tiết sp)
  	//Cách 1: dùng Javascript
@@ -105,11 +136,37 @@ $(document).ready(function() {
 $(document).ready(function() {
 	$("#minus_button").click(function() {
 		count -= 1;
-		if(count < 0)
+		if(count < 0) {
 			count = 0;
-		$(".quantity input:text").val(count);
+			$("#alert-content").html("Giỏ hàng của bạn đang là 0!");
+			$(".overlay-box").show();
+			$("#alert-content").css({"font-size":"22px","padding-top": "80px"});
+			$(".btn-confirm").hide();
+		}
+			$(".quantity input:text").val(count);
 			checkQuantity();
 	});
 });
 }
 quantity();
+
+//tạo sự kiện click cho thông báo alert - delete giỏ hàng
+$(document).ready(function() {
+	$(".btn-cart-delete").click(function() {
+		$(".overlay-box").show();
+		$("#alert-content").html("Bạn có muốn xóa sản phẩm này không?");
+		$("#alert-content").css({"font-size":"16px","font-weight": "600","padding-top": "48px"});		
+		$(".btn-confirm").show();
+	});
+});
+//tạo nút thoát X cho thông báo alert
+$(document).ready(function() {
+	$(".fa-times").click(function() {
+		$(".overlay-box").hide();
+
+	});
+});
+
+// $(document).ready(function() {
+// 	$("")
+// });
