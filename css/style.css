@@ -303,7 +303,7 @@
     top: 6px;}
 
     /*sản phẩm*/
-.overlay {
+.card-img .overlay {
     position: absolute;
     left: 0px;
     background: rgb(0, 0, 0);
@@ -909,7 +909,11 @@
     font-weight: 500;
     float: right;
     padding-right: 20px;
-}     
+}   
+.product-price> input[type=text] {
+    width: 150px;
+    text-align: right;
+}  
 .cart-content {     
     display: -webkit-box;
 }
@@ -978,13 +982,21 @@ table input{
     color:#aaa;
     text-align: left;
 }
-.total-box .cost {
+.total-box .ship-cost {
     text-align: right;
     float: right;
     padding-right: 5px;
 }
+.ship-cost input[type=text] {
+    text-align: right;
+    width: 148px;
+}
 .total-box .cost:after { 
     content: ' đồng';
+}
+.total-cost input[type=text] {
+    text-align: right;
+    width: 194px;
 }
 .total-box .total-item2 {
     border: 2px solid #edeff1;

@@ -277,7 +277,7 @@
 		<div class="row cart-content table-responsive-xl">
 				<div class=" top-cart-box box1">
 					<div class="product-image">
-						<span id="heart-icon6" class="heart-icon" onclick="changeIcon(this)">
+						<span class="heart-icon" onclick="changeIcon(this)">
 				    	 <i class="far fa-heart fa-lg" ></i>
 				    	 <i class="fas fa-heart fa-lg black-heart-icon "  ></i>
 				    	</span> 
@@ -295,22 +295,24 @@
 				</div>
 				<div class="top-cart-box box3">
 					<div class="product-quantity quantity">
-						<button type="button" class="btn btn-light" id="minus_button"><i class="fas fa-minus-square fa-lg"></i></button>
-						<input type="text" name="quantity" value="0" pattern="^[1-9]\d{0,1}$" title="nhập số dương và tối đa là 2 chữ số " class="input-quantity" id="quantity_id" required readonly>
-						<button type="button" class="btn btn-light" id="plus_button"><i class="fas fa-plus-square fa-lg"></i></button>							
+						<button type="button" class="btn btn-light minus_button"><i class="fas fa-minus-square fa-lg"></i></button>
+						<input type="text" name="quantity" value="1" class="input-quantity quantity_class"  id="cart-quantity" readonly>
+						<button type="button" class="btn btn-light plus_button"><i class="fas fa-plus-square fa-lg"></i></button>							
 					</div>
 				</div>
 				<div class="top-cart-box box4">
 					<div class="product-remove">
-						<button type="button" class="btn btn-danger btn-cart-delete" id="btn-cart-id">Xóa <i class="fas fa-trash-alt"></i></button>
+						<button type="button" class="btn btn-danger" id="btn-cart-delete">Xóa <i class="fas fa-trash-alt"></i></button>
 					</div>
 				</div>
 				<div class="top-cart-box box5">
 					<div class="product-price">
-						7.500.000
+						<input type="text" id="show-price" readonly value="2,490,000">
+						<input type="hidden" id="product-price1" value="2490000">
 					</div>
 				</div>					
 		</div>
+	
 		<div class="row">
 			<div class="empty-cart">
 			<i class="fas fa-exclamation-circle fa-5x fa-stack-2x" style="color:Tomato"></i>
@@ -324,7 +326,7 @@
 			<div class="alert-box">
 				<i class="fas fa-times fa-1x"></i>
 				<i class="fas fa-exclamation-circle fa-4x" style="color:Tomato"></i>
-				<div class="content" id="alert-content">Bạn có muốn xóa sản phẩm này không?</div>
+				<div class="content alert-content">Bạn có muốn xóa sản phẩm này không?</div>
 				<button type="button" class="btn btn-success btn-confirm">Xác nhận</button>
 			</div>
 		</div>
@@ -342,12 +344,10 @@
 									<th>Địa chỉ</th>
 								</tr>
 								<tr>
-									
 									<td><input type="text" name="customer" value="Ngô Khá Bảnh" placeholder="Customer" required></td>
 									<td><input type="tel" name="phone" value="0128462598" placeholder="Phone" required></td>
 									<td><input type="email" name="email" value="BanhVN@gmail.com" placeholder="Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+.+.[a-zA-Z]{2,3}" title="abc@xyz.mn"></td>
 									<td><input type="text" name="address" value="Cầu giấy, Hà Nội" placeholder="Address" required></td>
-								
 								</tr>									
 							</tbody>
 							</table>
@@ -357,14 +357,15 @@
 				<div class="col-lg-4 total-box">
 					<div class="total-item">
 						<span class="label">Phí vận chuyển:</span>
-						<span class="cost">30.000</span>
+						<span class="cost ship-cost"><input type="text" value="0"></span>
+						<input type="hidden" name="shipCost" value="0">
 					</div>
 					<div class="total-item2">
 						<span class="label">Tổng tiền:</span>
-						<span class="cost">7.530.000</span>
+						<span class="cost total-cost"><input type="text" id="show-total" readonly value="2,490,000"></span>
+						<input type="hidden" name="total" value="2490000">
 					</div>
 					<button type="submit" class="btn btn-outline-success" form='form_customer_info'>Thanh toán &nbsp;<i class="far fa-credit-card"></i></button>
-					
 				</div>		
 			</div>	
 		<!-- End tạo giỏ hàng -->			

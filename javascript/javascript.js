@@ -76,7 +76,7 @@ function changeIcon(e) { //e là thẻ
 	//đặt id cho div/span báo lỗi có tên là :quantity-err-message_x
 	//đặt class cho div/span báo lỗi có tên là:err-message
 function checkQuantity() {
-	var quant = $("#quantity_id").val(); // $("input:text").val();
+	var quant = $(".quantity_class").val(); // $("input:text").val();
 
  		if (isNaN(quant) == true) { //kiểm tra có nhập bậy hay ko ví dụ: 20abc
  			$("#quantity-err-message2").show();
@@ -109,53 +109,63 @@ function checkQuantity() {
 $(document).ready($("input:text").keyup(function() {
 	checkQuantity();
 }));
-
-$(document).ready($("#detail_product_form").submit(function() {
-	if(checkQuantity() == true) {
-			alert("Thành công!");
-			return true;
-		}
-		else {
-			alert("Thất bại. Vui lòng kiểm tra lại ô nhập số lượng");
-			return false;
-		}
-} ));
-
-function quantity() {
-//Tạo nút tăng số lượng 
-$("#quantity_id").val("0");
-var count = 0;
+//tạo hàm submit cho nút mua
+function submitCart() {
+		$("#detail_product_form").submit(function() {
+			if(checkQuantity() == true) {
+					alert("Thành công!");
+					return true;
+				}
+				else {
+					alert("Thất bại. Vui lòng kiểm tra lại ô nhập số lượng");
+					return false;
+				}
+		});
+}
 $(document).ready(function() {
-	$("#plus_button").click(function() {
+	submitCart()
+});
+function quantity() {
+$(".quantity_class").val("1");
+$("#cart-quantity").val("1");
+var count = 1;
+//Tạo nút tăng số lượng 
+$(document).ready(function() {
+	$(".plus_button").click(function(event) {
 		count += 1;
 		$(".quantity input:text").val(count);
 		checkQuantity();
+		var target = $( event.currentTarget);
+		 totalCart(target) ;
 	});
 });
 //Tạo nút giảm số lượng 
 $(document).ready(function() {
-	$("#minus_button").click(function() {
+	$(".minus_button").click(function(event) {
 		count -= 1;
 		if(count < 0) {
 			count = 0;
-			$("#alert-content").html("Giỏ hàng của bạn đang là 0!");
+			$(".alert-content").text("Giỏ hàng của bạn đang là 0!");
 			$(".overlay-box").show();
-			$("#alert-content").css({"font-size":"22px","padding-top": "80px"});
+			$(".alert-content").css({"font-size":"22px","padding-top": "80px"});
 			$(".btn-confirm").hide();
 		}
 			$(".quantity input:text").val(count);
 			checkQuantity();
+			var target = $( event.currentTarget);
+			totalCart(target);
+			
 	});
 });
 }
 quantity();
-
+/*Begin giỏ hàng*/
 //tạo sự kiện click cho thông báo alert - delete giỏ hàng
 $(document).ready(function() {
-	$(".btn-cart-delete").click(function() {
+	$("#btn-cart-delete").click(function(event) {
 		$(".overlay-box").show();
-		$("#alert-content").html("Bạn có muốn xóa sản phẩm này không?");
-		$("#alert-content").css({"font-size":"16px","font-weight": "600","padding-top": "48px"});		
+		$(".alert-content").text("Bạn có muốn xóa sản phẩm này không?");
+		$(".alert-content").css({"font-size":"16px","font-weight": "600","padding-top": "48px"});		
 		$(".btn-confirm").show();
 	});
 });
@@ -163,10 +173,40 @@ $(document).ready(function() {
 $(document).ready(function() {
 	$(".fa-times").click(function() {
 		$(".overlay-box").hide();
-
 	});
 });
 
-// $(document).ready(function() {
-// 	$("")
-// });
+//hàm định dạng tiền tệ
+function formatNumber(nStr, decSeperate, groupSeperate) {
+	nStr += '';
+	x = nStr.split(decSeperate);
+	x1 = x[0];
+	x2 = x.length > 1 ? '.' + x[1] : '';
+	var rgx = /(\d+)(\d{3})/;
+	while (rgx.test(x1)) {
+		x1 = x1.replace(rgx, '$1' + groupSeperate + '$2');
+	}
+	return x1 + x2;
+}
+//tạo bảng giỏ hàng khi bấm nút thêm vào giỏ hàng/ mua
+
+function totalCart(t) {
+	var total =	$("input[name=total]").val(); //lấy input tổng tiền ẩn hiện tại 
+	var hiddenPrice = $("#product-price1").val(); //lấy input đơn giá ẩn hiện tại  
+	var price = hiddenPrice;
+	var quantity = $("#cart-quantity").val(); //lấy số lượng hiện tại
+	var shipCost = $("input[name=shipCost]").val(); // lấy phí ẩn
+
+	price = price * quantity;
+
+	if(t.is(".plus_button")) {
+		total = + parseInt(total) + parseInt(hiddenPrice);
+	}
+	else if(t.is(".minus_button")) {
+		total =  parseInt(total)  - parseInt(hiddenPrice);
+	}
+	$("#show-price").val(formatNumber(price, '.', ',')); //hiển thị cho đơn giá
+	$("#show-total").val(formatNumber(total, '.', ',')); //hiển thị cho tổng tiền
+	return $("input[name=total]").val(total); //cập nhật giá tổng tiển ẩn
+}
+// /*End giỏ hàng*/

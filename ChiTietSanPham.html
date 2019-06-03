@@ -365,11 +365,11 @@
 						<div class="quantity">
 							<b>Số lượng:</b>
 							<!-- <input type="number" name="quantity" value="" min="1" max="5" class="input-quantity" id="quantity_id"> -->
-							<button type="button" class="btn btn-light" id="minus_button"><i class="fas fa-minus-square fa-lg"></i></button>
-							<input type="text" name="quantity" value="0" pattern="^[1-9]\d{0,1}$" title="nhập số dương và tối đa là 2 chữ số " class="input-quantity" id="quantity_id" required>
-							<button type="button" class="btn btn-light" id="plus_button"><i class="fas fa-plus-square fa-lg"></i></button>		
+							<button type="button" class="btn btn-light minus_button"><i class="fas fa-minus-square fa-lg"></i></button>
+							<input type="text" name="quantity" value="0" pattern="^[1-9]\d{0,1}$" title="nhập số dương và tối đa là 2 chữ số " class="input-quantity quantity_class" required >
+							<button type="button" class="btn btn-light plus_button"><i class="fas fa-plus-square fa-lg"></i></button>		
 							<div class="cart-button">
-								<button type="submit" class="btn btn-outline-info ">Mua &nbsp;<i class="fas fa-cart-plus"></i>
+								<button type="submit" class="btn btn-outline-info btn-cart-submit">Mua &nbsp;<i class="fas fa-cart-plus"></i>
 								</button>
 								<button type="button" class="btn btn-outline-danger">Thêm vào danh sách yêu thích<i class="fas fa-heart"></i></button>
 							</div>							

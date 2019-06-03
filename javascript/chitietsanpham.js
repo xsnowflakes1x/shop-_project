@@ -12,7 +12,7 @@ function showTab(e,id) { //e là event dùng để bắt sự kiện
 		tabContent[i].style.display = 'none';
 	}
 	document.getElementById(id).style.display = 'block';//cẩn thận ko ghi: tabButton[i].className += " active"; vì lấy id từ bên ngoài vào
-	e.currentTarget.className += ' active'; 
+	e.target.className += ' active'; 
 	//currentTarget trả về thẻ mang Event Listener của chính nó và thẻ này sinh ra sự kiện
 	//ngược lại target trả về 1 thẻ nào đó ko mang Event Listener và thẻ dó sinh ra sự kiện  
 	//	active //tạo dấu mũi tên cho phần tử hiện tại được active
