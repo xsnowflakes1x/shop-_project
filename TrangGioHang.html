@@ -46,7 +46,7 @@
 							<div class="bot-flex-containner">
 								<div class="bot-item"><a href="#" class="item-link"><i class="fas fa-phone-square fa-flip-horizontal"></i><b>0903378888</b></a></div>
 								<div class="bot-item"><a href="#" class="item-link"><i class="fas fa-user"></i><b>Tài Khoản</b></a></div>
-								<div class="bot-item"><a href="#" class="item-link"><i class="fas fa-shopping-cart"></i><b>Giỏ Hàng</b><span class="count">&nbsp;<b>(0)</b></span></a></div>								
+								<div class="bot-item"><a href="#" class="item-link"><i class="fas fa-shopping-cart"></i><b>Giỏ Hàng</b><span class="count">&nbsp;<b>(0)</b></span></a></div>
 							</div>
 							<div class="center-flex-containner">
 								<div class="center-item">
@@ -267,7 +267,8 @@
 				<div class="bread_crumb">
 					<nav class="breadcrumb bg-light">
 						<a class="breadcrumb-item" href="Index.html">Trang chủ</a>
-						<span class="breadcrumb-item active">Trang giỏ hàng</span>
+						<i class="fas fa-chevron-right"></i>
+						<span class="breadcrumb-item active">Trang chi tiết sản phẩm</span>
 					</nav>
 				</div>
 			</div>
@@ -279,7 +280,7 @@
 					<div class="product-image">
 						<span class="heart-icon" onclick="changeIcon(this)">
 				    	 <i class="far fa-heart fa-lg" ></i>
-				    	 <i class="fas fa-heart fa-lg black-heart-icon "  ></i>
+				    	 <i class="fas fa-heart fa-lg black-heart-icon"></i>
 				    	</span> 
 						<img src="image/products/cart.png" class="img-thumbnail img-fluid" alt="Cinque Terre">
 					</div>
@@ -315,8 +316,8 @@
 	
 		<div class="row">
 			<div class="empty-cart">
-			<i class="fas fa-exclamation-circle fa-5x fa-stack-2x" style="color:Tomato"></i>
-			<i class="fas fa-shopping-basket fa-6x  fa-stack-1x"></i>
+			<i class="fas fa-exclamation-circle fa-5x fa-stack-2x" ></i>
+			<i class="fas fa-shopping-basket fa-6x fa-stack-1x"></i>
 			<h1> Giỏ hàng trống	<i class="fas fa-exclamation"></i></h1>
 			<p>Bạn nhấn vào <a href="Index.html">đây</a> để tiếp tục mua hàng nhé!<i class="far fa-smile-beam fa-1x"></i></p>				
 			</div>	
@@ -325,9 +326,16 @@
 		<div class="overlay-box">
 			<div class="alert-box">
 				<i class="fas fa-times fa-1x"></i>
-				<i class="fas fa-exclamation-circle fa-4x" style="color:Tomato"></i>
+				<i class="fas fa-exclamation-circle fa-4x"></i>
 				<div class="content alert-content">Bạn có muốn xóa sản phẩm này không?</div>
-				<button type="button" class="btn btn-success btn-confirm">Xác nhận</button>
+				<div class="container-btn">
+					<div class="item-btn">
+						<button type="button" class="btn btn-yes">Có</button>
+					</div>
+					<div class="item-btn">
+						<button type="button" class="btn btn-no">Không</button>
+					</div>
+				</div>
 			</div>
 		</div>
 			<div class="row row-bot-cart">
@@ -357,7 +365,7 @@
 				<div class="col-lg-4 total-box">
 					<div class="total-item">
 						<span class="label">Phí vận chuyển:</span>
-						<span class="cost ship-cost"><input type="text" value="0"></span>
+						<span class="cost ship-cost"><input type="text" value="0" readonly></span>
 						<input type="hidden" name="shipCost" value="0">
 					</div>
 					<div class="total-item2">
@@ -380,7 +388,7 @@
 						| <a href="#" class="link" >Terms&nbsp;of&nbsp;Use</a> 
 						| <a href="#" class="link">Privacy&nbsp;Policy</a>
 					</p>
-					<h5 class="rights-text">&copy; 2019 Shoes Shop. All rights reserved | Design by Team 15A</h5> 
+					<h5 class="rights-text">&copy; 2019 Shoes Shop. All rights reserved | Design by Truc Truong</h5> 
 				</div>
 			</div>
 		</footer>

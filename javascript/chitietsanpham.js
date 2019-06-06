@@ -64,9 +64,6 @@ function showSlides(n) { //n vừa nhận giá trị index vừa nhận giá tr�
 $(document).ready(function() {
 	$('#zoom_id1').zoom();
 	$('#zoom_id2').zoom();
-	$('#zoom_id3').zoom({ on:'grab' });
-	$('#zoom_id4').zoom({ on:'grab' });		
-	// $('#style2').zoom({ on:'grab' });
-	// $('#style3').zoom({ on:'click' });			 
-	// $('#style4').zoom({ on:'toggle' });
+	$('#zoom_id3').zoom();
+	$('#zoom_id4').zoom();		
 });

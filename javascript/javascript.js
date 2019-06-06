@@ -33,43 +33,43 @@ function changeIcon(e) { //e là thẻ
  	//kiểm tra Form validation -- số lượng nhập vào (trong trang chi tiết sp)
  	//Cách 1: dùng Javascript
 
-//  function  checkQuantity() {
-//  		var quant = document.getElementById("quantity_id");
-//  		quant = quant.value;
-//  		if (isNaN(quant) == true) { //kiểm tra có nhập bậy hay ko ví dụ: 20abc
-//  			document.getElementById("quantity-err-message2").style.display = 'block';
-//  			document.getElementById("quantity-err-message1").style.display = '';
-//  			return false;
-//  		}
-//  		else {
-//  			document.getElementById("quantity-err-message2").style.display = '';
-//  			quant = parseInt(quant);
-//  				if(quant <= 10) {
-//  					document.getElementById("quantity-err-message1").style.display = '';
-//  					return true;
-//  				}
-//  				else if(quant > 5){
-//  					document.getElementById("quantity-err-message1").style.display = 'block';
-//  					return false; 					
-//  				}
-//  				else {
-//  					document.getElementById("quantity-err-message1").style.display = '';
-//  					return false; 					
-//  				}
-//  		}
-//  	}
-// document.getElementById("quantity_id").onkeyup = checkQuantity;
-// document.detail_product_form.onsubmit = submitDetailProduct;
-// function submitDetailProduct() {
-// 	if(checkQuantity()==true) {
-// 		alert("Thành công!");
-// 		return true;
-// 	}
-// 	else {
-// 		alert("Thất bại. Vui lòng kiểm tra lại ô nhập số lượng");
-// 		return false;
-// 	}
-// }
+/* function  checkQuantity() {
+ 		var quant = document.getElementById("quantity_id");
+ 		quant = quant.value;
+ 		if (isNaN(quant) == true) { //kiểm tra có nhập bậy hay ko ví dụ: 20abc
+ 			document.getElementById("quantity-err-message2").style.display = 'block';
+ 			document.getElementById("quantity-err-message1").style.display = '';
+ 			return false;
+ 		}
+ 		else {
+ 			document.getElementById("quantity-err-message2").style.display = '';
+ 			quant = parseInt(quant);
+ 				if(quant <= 10) {
+ 					document.getElementById("quantity-err-message1").style.display = '';
+ 					return true;
+ 				}
+ 				else if(quant > 5){
+ 					document.getElementById("quantity-err-message1").style.display = 'block';
+ 					return false; 					
+ 				}
+ 				else {
+ 					document.getElementById("quantity-err-message1").style.display = '';
+ 					return false; 					
+ 				}
+ 		}
+ 	}
+document.getElementById("quantity_id").onkeyup = checkQuantity;
+document.detail_product_form.onsubmit = submitDetailProduct;
+function submitDetailProduct() {
+	if(checkQuantity()==true) {
+		alert("Thành công!");
+		return true;
+	}
+	else {
+		alert("Thất bại. Vui lòng kiểm tra lại ô nhập số lượng");
+		return false;
+	}
+}*/
 	
 	//Cách 2: dùng JQuery
 	
@@ -111,16 +111,16 @@ $(document).ready($("input:text").keyup(function() {
 }));
 //tạo hàm submit cho nút mua
 function submitCart() {
-		$("#detail_product_form").submit(function() {
-			if(checkQuantity() == true) {
-					alert("Thành công!");
-					return true;
-				}
-				else {
-					alert("Thất bại. Vui lòng kiểm tra lại ô nhập số lượng");
-					return false;
-				}
-		});
+	$("#detail_product_form").submit(function() {
+		if(checkQuantity() == true) {
+			alert("Thành công!");
+			return true;
+		}
+		else {
+			alert("Thất bại. Vui lòng kiểm tra lại ô nhập số lượng");
+			return false;
+		}
+	});
 }
 $(document).ready(function() {
 	submitCart()
@@ -136,8 +136,11 @@ $(document).ready(function() {
 		$(".quantity input:text").val(count);
 		checkQuantity();
 		var target = $( event.currentTarget);
-		 totalCart(target) ;
-	});
+		var tt = totalCart(target) ;
+		tt = tt + 30000;
+		$("#show-total").val(formatNumber(tt, '.', ',')); //hiển thị cho tổng tiền
+		$("input[name=total]").val(tt); //cập nhật giá tổng tiển ẩn			
+	});	
 });
 //Tạo nút giảm số lượng 
 $(document).ready(function() {
@@ -148,13 +151,13 @@ $(document).ready(function() {
 			$(".alert-content").text("Giỏ hàng của bạn đang là 0!");
 			$(".overlay-box").show();
 			$(".alert-content").css({"font-size":"22px","padding-top": "80px"});
-			$(".btn-confirm").hide();
+			$(".btn-yes").hide();
+			$(".btn-no").hide();
 		}
-			$(".quantity input:text").val(count);
-			checkQuantity();
-			var target = $( event.currentTarget);
-			totalCart(target);
-			
+		$(".quantity input:text").val(count);
+		checkQuantity();
+		var target = $( event.currentTarget);
+		totalCart(target);
 	});
 });
 }
@@ -166,7 +169,8 @@ $(document).ready(function() {
 		$(".overlay-box").show();
 		$(".alert-content").text("Bạn có muốn xóa sản phẩm này không?");
 		$(".alert-content").css({"font-size":"16px","font-weight": "600","padding-top": "48px"});		
-		$(".btn-confirm").show();
+		$(".btn-yes").show();
+		$(".btn-no").show();		
 	});
 });
 //tạo nút thoát X cho thông báo alert
@@ -204,9 +208,45 @@ function totalCart(t) {
 	}
 	else if(t.is(".minus_button")) {
 		total =  parseInt(total)  - parseInt(hiddenPrice);
-	}
+	}	
+
 	$("#show-price").val(formatNumber(price, '.', ',')); //hiển thị cho đơn giá
 	$("#show-total").val(formatNumber(total, '.', ',')); //hiển thị cho tổng tiền
-	return $("input[name=total]").val(total); //cập nhật giá tổng tiển ẩn
+	$("input[name=total]").val(total); //cập nhật giá tổng tiển ẩn
+	var tt =total;
+	return tt;
 }
-// /*End giỏ hàng*/
+ /*End giỏ hàng*/
+function offSizeList() {
+	$(".size-list label").each(function() { //duyệt tắt hết 
+	$(this) .removeClass("activeSize") });
+}
+offSizeList();
+//tạo active cho sizeList của trang chi tiết sp
+function activeSizeList() {
+				$(".size-list label").click(function(event) { 
+				offSizeList();
+				var target = $(event.target);
+				target.addClass("activeSize"); //bật đối tượng hiện tại
+		});
+}
+activeSizeList();
+
+//tạo active cho colorList của trang chi tiết sp
+
+function offColorList() {//duyệt tắt hết check-icon
+	$(".color-list li").each(function() { 
+	$(".color-list i").hide();
+	});
+}
+offColorList();
+function activeColorList() {
+
+	$(".color-list label").click(function(event) {
+		offColorList();
+		var curTarget = $(event.currentTarget); //dùng currentTarget cho thẻ label để buddling
+		curTarget.siblings().show();
+		$("input:radio").hide();	
+	});
+}
+activeColorList();

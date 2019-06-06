@@ -1,4 +1,4 @@
-Chỉnh responsive*/
+/*Chỉnh responsive*/
 /*Begin chỉnh resposive hình cho <div class="top-header">*/
 @media screen and (max-width: 1280px ) {
 .center-banner {
@@ -173,9 +173,7 @@ Chỉnh responsive*/
 
 .horizontal-line {
     display: flex;
-    position: relative;
-    height: 26px;
-    margin-top: 12px;
+    align-items: center;
     }
 }
 @media screen and (max-width: 767px) {
@@ -306,8 +304,7 @@ Chỉnh responsive*/
     }        
 .product-image {
     height: 512px;
-}
-
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -320,7 +317,6 @@ Chỉnh responsive*/
 .product-infomation {
      height: 478px;
     } 
-          
 }
 
 /*end resposive cho trang chi tiết sp */
