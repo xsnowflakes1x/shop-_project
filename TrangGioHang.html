@@ -25,7 +25,7 @@
 			<div class="top-header">
 				<div class="row top-header-row">
 					<div class="col col-sm-6 col-md-4">
-						<div class="left-logo"><img src="image/girl-shoe-logo.png" alt="shoe-logo" class="img-fluid img-logo"></div>
+						<div class="left-logo"><a href="Index.html"><img src="image/girl-shoe-logo.png" alt="shoe-logo" class="img-fluid img-logo"></a></div>
 					</div>
 					<div class="col-12 col-sm-6 col-md-3">
 						<div class="center-banner"><img src="image/sale.png" alt="shoe-logo" class="img-fluid banner-img"></div>
@@ -50,7 +50,6 @@
 							</div>
 							<div class="center-flex-containner">
 								<div class="center-item">
-
 								</div>
 							</div>							
 						</div>
@@ -297,7 +296,7 @@
 				<div class="top-cart-box box3">
 					<div class="product-quantity quantity">
 						<button type="button" class="btn btn-light minus_button"><i class="fas fa-minus-square fa-lg"></i></button>
-						<input type="text" name="quantity" value="1" class="input-quantity quantity_class"  id="cart-quantity" readonly>
+						<input type="text" name="quantity" value="1" class="input-quantity quantity_class"  id="cart-quantity" readonly form="form_customer_info">
 						<button type="button" class="btn btn-light plus_button"><i class="fas fa-plus-square fa-lg"></i></button>							
 					</div>
 				</div>
@@ -363,17 +362,18 @@
 					</div>
 				</div>
 				<div class="col-lg-4 total-box">
-					<div class="total-item">
+<!-- 					<div class="total-item">
 						<span class="label">Phí vận chuyển:</span>
 						<span class="cost ship-cost"><input type="text" value="0" readonly></span>
 						<input type="hidden" name="shipCost" value="0">
-					</div>
+					</div> -->
 					<div class="total-item2">
 						<span class="label">Tổng tiền:</span>
 						<span class="cost total-cost"><input type="text" id="show-total" readonly value="2,490,000"></span>
 						<input type="hidden" name="total" value="2490000">
 					</div>
 					<button type="submit" class="btn btn-outline-success" form='form_customer_info'>Thanh toán &nbsp;<i class="far fa-credit-card"></i></button>
+					<button type="button" class="btn btn-outline-warning"><i class="fas fa-redo"></i></button>
 				</div>		
 			</div>	
 		<!-- End tạo giỏ hàng -->			

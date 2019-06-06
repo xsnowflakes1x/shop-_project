@@ -105,6 +105,7 @@
         a:link {
             text-decoration: none;
             transition-duration: .5s;
+            color: black;
         }
         .right-section a:visited {
             color: black;
@@ -277,7 +278,17 @@
     top: 20px;
 }
 /*End chỉnh menu*/
-
+/*view*/
+.summary-product b{
+    border: 1.5px solid black;
+    padding: 0px 4px;
+}
+.summary-product,.view b {
+    font-size: 20px;
+}
+.view {
+    padding-left: 100px;
+}
 
 /*chỉnh dòng kẻ ngang cho sản phẩm*/
 .horizontal-line {
@@ -328,7 +339,9 @@
 .card-img:hover {
     transform: scale(1.15); 
 }
-
+.card .heart-icon {
+    width: 20px;
+}
 .card {
     width: 100%;
     position: relative;
@@ -496,7 +509,7 @@
 .email-footer input[type="submit"]:hover {
     border: 1px solid;
     width: 100%;
-    background-color: #3ed4ffbd;
+    background-color: #d7d7d7; #3ed4ffbd;
     box-shadow: 0 8px 6px -6px black,0 2px 4px rgba(0,0,0,0.1);;    
     padding-left: 13px;
     transform: translateY(4px);

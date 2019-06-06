@@ -81,7 +81,7 @@
 /*End ChiTietSanPham  CSS grid*/
 /*Begin flexbox*/
 .top-flex-containner {
-	background: #888886;
+	background: #f8f9fa;
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
@@ -103,7 +103,7 @@
     width: 100%;
 }
 .bot-flex-containner {
-	background: #888886;
+	background: #f8f9fa;
 	width: 100%;
 	display: flex;
 	justify-content: flex-end;

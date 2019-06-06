@@ -1,5 +1,7 @@
 // hiển thị icon black heart
-function changeIcon(e) { //e là thẻ 
+var counterHeart = 0;
+function changeIcon(e) { //e là thẻ  
+
 
 	//lấytoàn bộ tên class (tim trắng)	
 	var selector_class_name = e.querySelector(".far").className;
@@ -17,18 +19,33 @@ function changeIcon(e) { //e là thẻ
 		tim_trang_class.style.display="none";
 
 		tim_den_class.style.display="inline-block";
-
+		counterHeart +=1;
 		//Đổi tên tạm class emty-heart
 		tim_trang_class.className="far";
 	}
 	else {
-
+		counterHeart -=1;
 		tim_trang_class.style.display="inline-block";
 		tim_den_class.style.display="none";
 		//Gán lại tên cũ cho class emty-heart
 		tim_trang_class.className="far fa-heart fa-lg";		
 	}	
-}	
+	
+	$(document).ready(function() {
+		$(".view b").text(function() {
+			return " ("+counterHeart+")";
+		});
+	});
+}
+	var counterCard = 0; 	
+$(document).ready(function() {
+	$(".card").each(function() {
+		counterCard +=1;
+		$(".summary-product b").text(function() {
+			return counterCard;
+		});
+	});
+});
 
  	//kiểm tra Form validation -- số lượng nhập vào (trong trang chi tiết sp)
  	//Cách 1: dùng Javascript
@@ -137,7 +154,7 @@ $(document).ready(function() {
 		checkQuantity();
 		var target = $( event.currentTarget);
 		var tt = totalCart(target) ;
-		tt = tt + 30000;
+		// tt = tt + 30000;
 		$("#show-total").val(formatNumber(tt, '.', ',')); //hiển thị cho tổng tiền
 		$("input[name=total]").val(tt); //cập nhật giá tổng tiển ẩn			
 	});	
@@ -207,7 +224,12 @@ function totalCart(t) {
 		total = + parseInt(total) + parseInt(hiddenPrice);
 	}
 	else if(t.is(".minus_button")) {
-		total =  parseInt(total)  - parseInt(hiddenPrice);
+		if(total > 0) {
+			total =  parseInt(total)  - parseInt(hiddenPrice);
+		}
+		else {
+			total = 0;
+		}
 	}	
 
 	$("#show-price").val(formatNumber(price, '.', ',')); //hiển thị cho đơn giá
