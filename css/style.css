@@ -9,7 +9,7 @@
     font-weight: 600;
 }
 .bg-product {
-    background-color:#ffefd0ad; /*#ffc964ad;*//* #5758BB;*/
+    background-color:#f8f9fa; /*#ffc964ad;*//* #5758BB;*/
 }
 
 /*Fix lỗi menu bằng z-index*/
@@ -392,6 +392,21 @@
 /*end sản phẩm*/
 
 /*footer*/
+.jumbotron-footer-bot {
+    border: 2px solid;
+    border-radius: 10px;
+    background: #ffffff!important; 
+    box-shadow: 6px 8px 6px grey;   
+}
+.jumbotron-footer-top {
+    border: 2px solid;
+    border-radius: 10px;
+    background: #ffffff!important; 
+}
+/*.jumbotron-footer-top:hover {
+    box-shadow: 6px 10px 6px grey;  
+}*/
+
 .footer-link {
     color: black;
     text-decoration: none;
@@ -595,7 +610,8 @@
 }
 .product-infomation {
     height: 440px;
-    line-height: 26px;    
+    line-height: 26px;
+     
 }
 .product-infomation .status {
    font-weight: 600;
@@ -703,6 +719,7 @@ label.activeSize {
 }
 .cart-form  .cart-button {
     display:inline-block;
+    margin: 4px 0px;
 }
 .link-bnt {
     text-decoration: none;
@@ -715,6 +732,9 @@ label.activeSize {
 /*end right info product*/
 
 /*Begin chỉnh tab thông tin & mô tả, bình luận, đánh giá*/
+.tab .tab-button {
+    background-color: #ff8192;    
+}
 .tab {
     height: 45px;
 }
@@ -723,7 +743,7 @@ label.activeSize {
     position: absolute;
     width: 0;
     height: 0;
-    border-top: 10px solid #dddddd;
+    border-top: 10px solid #ff8192;
     border-left: 10px solid rgba(69, 42, 21, 0);
     border-right: 10px solid rgba(199, 57, 57, 0);
     left: 45%;
@@ -736,7 +756,7 @@ label.activeSize {
     position: relative;     
 }
 .tab button:hover {
-  background-color: #f1f1f1;
+  background-color: #ffffff;
 
 }
 
@@ -1163,11 +1183,59 @@ table input{
 /*end tranggiohang*/
 
 /*begin trangdangkydangnhap*/
-body#background {
-/*    background-image: url("../image/background/backgroundsneakers2.jpg");*/
-    background-repeat: no-repeat;
-    background-size: cover;
+body, html {
+    height: 100%;
 }
 
+div#background {
+    background-image: url("../image/background/backgroundsneakers1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;  
+    background-size: cover;
+    height: 100%;
+}
 
+.text-box {
+    border-bottom: 2px solid #ffd472;
+    margin: 15px 15px;
+    padding-bottom: 15px;
+}
+.sign-in-box h2 {
+    border-bottom: 6px solid #ffd472;
+    width: 74%;
+    margin: 5%auto;
+    margin-bottom: 20px;
+    line-height: 48px;
+}
+.sign-in-box {
+    outline: 0;
+    position: absolute;
+    left: 50%;
+    top:40%;
+    transform:translate(-50%,-50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.sign-in-box input:focus {
+    outline-color: #ffd472;
+    outline-style: solid;
+    outline-width: 2px;
+}
+.sign-in-box .sign-in-btn {
+    width: 100%;
+    outline-color: #ffd472;
+    outline-style: solid;
+    outline-width: thin;
+    color: #ffd472!important;   
+}
+.sign-in-box .sign-in-btn:hover {
+    width: 100%;
+    border-radius: initial;
+    outline-color: #ffd472;
+    outline-style: solid;
+    outline-width: thin;
+    color: white!important;
+    background: #ffd472;  
+}
 /*end trangdangkydangnhap*/

@@ -165,7 +165,7 @@
 .line {
     border-top: 2px solid #333;
     border-color: black;
-    width: 714px;
+    width: 308px;
     left: 215px;
     top: -5px;
 
@@ -199,7 +199,7 @@
 }    
 .line {
     border-top: 2px solid #333;
-    width: 366px;
+    width: 110px;
     left: 171px;
     }
 }
@@ -315,8 +315,17 @@
     height: 477px;
     }     
 .product-infomation {
-     height: 478px;
+    height: 505px;
+    overflow: auto;
     } 
 }
-
+@media screen and (min-width: 992px){
+.product-info {
+    overflow: auto;
+    height: 440px;
+    }
+.product-infomation {
+    height: 476px;
+    }    
+}
 /*end resposive cho trang chi tiết sp */

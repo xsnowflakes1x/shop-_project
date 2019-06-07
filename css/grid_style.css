@@ -76,7 +76,8 @@
 }
 .related-product {
     height: auto;
-    padding-top: 15px;
+    padding: 15px 0;
+
 }
 /*End ChiTietSanPham  CSS grid*/
 /*Begin flexbox*/
@@ -162,7 +163,9 @@
 	    height: 150px;
     background: #fae47a;
 }
-
+/*.product-info {
+	overflow: scroll;
+}*/
 /*.container-btn {
 	background: #caf690;
     width: 400px;
