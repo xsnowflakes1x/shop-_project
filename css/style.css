@@ -626,6 +626,7 @@ label.activeSize {
     border-color: #ddd;
     background:#ff070761;
 }
+
 .size-list>input[type=radio]{
     display: none;
 } 
@@ -1103,6 +1104,20 @@ table input{
 }
 .alert-box .btn-yes, .btn-no {
     width: 100%;
+
+}
+.alert-box .btn-yes:hover, .btn-no:hover {
+  animation: shake 0.2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-2deg); }
+  40% { transform: translate(1px, -1px) rotate(2deg); }
+  50% { transform: translate(-1px, 2px) rotate(-2deg); }
+  80% { transform: translate(-1px, -1px) rotate(2deg); }
+  100% { transform: translate(1px, -2px) rotate(-2deg); }
 }
 .alert-box .btn-yes {
     background:#A3CB38;    
@@ -1146,3 +1161,13 @@ table input{
     background-position: 68px -58px;   
 }
 /*end tranggiohang*/
+
+/*begin trangdangkydangnhap*/
+body#background {
+/*    background-image: url("../image/background/backgroundsneakers2.jpg");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*end trangdangkydangnhap*/

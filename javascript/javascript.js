@@ -196,7 +196,11 @@ $(document).ready(function() {
 		$(".overlay-box").hide();
 	});
 });
-
+$(document).ready(function() {
+	$(".btn-no").click(function() {
+		$(".overlay-box").hide();
+	});
+});
 //hàm định dạng tiền tệ
 function formatNumber(nStr, decSeperate, groupSeperate) {
 	nStr += '';
