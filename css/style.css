@@ -870,7 +870,7 @@ label.activeSize {
 /*Begin css cho Form trang chi tiet san pham*/
 
 
-.err-message {
+.quantity .err-message {
     color:red;
     display: none;
 }
@@ -1188,17 +1188,17 @@ body, html {
 }
 
 div#background {
-    background-image: url("../image/background/backgroundsneakers1.jpg");
+    background-image: url("../image/background/background3.jpg");
     background-repeat: no-repeat;
     background-position: center;  
     background-size: cover;
     height: 100%;
 }
-
+/*style trang đăng nhập*/
 .text-box {
     border-bottom: 2px solid #ffd472;
     margin: 15px 15px;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
 }
 .sign-in-box h2 {
     border-bottom: 6px solid #ffd472;
@@ -1214,28 +1214,123 @@ div#background {
     top:40%;
     transform:translate(-50%,-50%);
     color: white;
-    background: rgba(0, 0, 0, 0.35);
+    background:  #2a342ac9; /*rgba(0, 0, 0, 0.35);*/
 }
 
 .sign-in-box input:focus {
-    outline-color: #ffd472;
+    outline-color: #ffcd5b;
     outline-style: solid;
     outline-width: 2px;
 }
 .sign-in-box .sign-in-btn {
     width: 100%;
-    outline-color: #ffd472;
+    outline-color:#ffcd5b;
     outline-style: solid;
     outline-width: thin;
-    color: #ffd472!important;   
+    color: #ffcd5b;!important;   
 }
 .sign-in-box .sign-in-btn:hover {
     width: 100%;
     border-radius: initial;
-    outline-color: #ffd472;
+    outline-color: #ffcd5b;;
     outline-style: solid;
     outline-width: thin;
     color: white!important;
     background: #ffd472;  
 }
+.sign-in-box .sign-up-btn-now {
+    width: 100%;
+    outline-color:#ffcd5b;
+    outline-style: solid;
+    outline-width: thin;
+    color: #ffcd5b;!important;       
+}
+.sign-in-box .sign-up-btn-now:hover {
+    width: 100%;
+    border-radius: initial;
+    outline-color: #ffcd5b;;
+    outline-style: solid;
+    outline-width: thin;
+    color: white!important;
+    background: #ffd472;  
+}
+.sign-in-box .err-message {
+    color: red;
+}
+
+
+/*style trang đăng ký*/
+.sign-up-box h2 {
+    border-bottom: 6px solid #ffd472;
+    width: 25%;
+    margin: auto;
+    line-height: 48px;
+}
+.sign-up-box {
+    outline: 0;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    color: white;
+    background: #2a342ac9; /*rgba(0, 0, 0, 0.35);*/
+    width: 50%;
+    display: none;
+}
+
+.sign-up-box input:focus {
+    outline-color: #ffcd5b;
+    outline-style: solid;
+    outline-width: 2px;
+}
+.sign-up-box .sign-up-btn, .back-sign-up-btn {
+    width:80%;
+    outline-color:#ffcd5b;
+    outline-style: solid;
+    outline-width: thin;
+    color: #ffcd5b;!important;   
+}
+.sign-up-box .sign-up-btn:hover, .back-sign-up-btn:hover {
+    border-radius: initial;
+    outline-color: #ffcd5b;;
+    outline-style: solid;
+    outline-width: thin;
+    color: white!important;
+    background: #ffd472;  
+}
+
+.sign-up-box .err-message {
+    color: red;
+}
+.sign-up-box .container {
+    display: flex;
+}
+.sign-up-box a {
+    color:white;
+}
+.sign-up-box .left-box, .right-box {
+    width: 50%;
+}
+.sign-up-box .left-box {
+    border: 2px solid;
+    border-bottom: 0;
+    border-top: 0;
+    border-left: 0;
+}
+.sign-up-box .right-box {
+    display: flex;
+    flex-direction: column;
+}
+.right-box .image-box {
+    margin: 0 25%; 
+}
+.create-account{
+    width: 100%;
+    margin: 0 10%;
+}
+
+.sign-up-box .err-message, .sign-in-box .err-message {
+    display: none;
+}
 /*end trangdangkydangnhap*/
+

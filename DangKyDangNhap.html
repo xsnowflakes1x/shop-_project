@@ -20,23 +20,118 @@
 </head>
 <body>
 	<div id="background"></div>
+	<!-- Tạo trang đăng nhập -->
 	<div class="sign-in-box">
 		<form action="Index.html">
 			<h2>Đăng Nhập</h2>
 			<div class="text-box">
 				<div>Tên đăng nhập</div>
-				<i class="fas fa-user"></i>			
-				<input type="text" name="username" id="username" value="">
-		
+				<i class="fas fa-user fa-fw"></i>			
+				<input type="text" name="username" id="username" value="" placeholder="nhập tên đăng nhập" required>
+				<div class="err-message" id="err_user">Tên đăng nhập không đúng!</div>
 			</div>
 			<div class="text-box">
 				<div>Mật khẩu</div>
-				<i class="fas fa-lock"></i>
-
-				<input type="password" name="password" id="password" value="">
-
+				<i class="fas fa-lock fa-fw"></i>
+				<input type="password" name="password" id="password-in" value="" placeholder="nhập mật khẩu" required>
+				<div class="err-message" id="err_psw">Sai mật khẩu!</div>
 			</div>
-				<button type="submit" class="btn sign-in-btn" >Submit</button>
+				<button type="submit" class="btn sign-in-btn" >Đăng nhập <i class="fas fa-sign-in-alt"></i></button>
+		</form>		
+				<div><u><i>Bạn chưa có tài khoản?</i></u></div>
+				<button type="button" class="btn sign-up-btn-now">Đăng ký ngay! </button>
+	
+	</div>
+	<!-- Tạo trang đăng ký -->
+	<div class="sign-up-box">
+		<form action="Index.html">
+			<h2>Đăng Ký  <sup><i class="far fa-registered"></i> </sup></h2>
+			<div class="container">
+				<div class="left-box">
+					<div class="text-box">
+						<div>Họ & tên</div>
+						<i class="fas fa-user fa-fw"></i>			
+						<input type="text" name="fullname" id="fullname" value="" placeholder="nhập họ và tên" required>
+						<div class="err-message" id="err-fullname">Tên đăng nhập không đúng!</div>
+					</div>
+					<div class="text-box">
+						<div>Ngày sinh</div>
+						<i class="far fa-calendar-alt fa-fw"></i>		
+						<input type="date" name="birthday" id="birthday" >
+						<div class="err-message" id="err-birthday">Tên đăng nhập không đúng!</div>
+					</div>			
+					<div class="text-box">
+						<div>Số điện thoại</div>
+						<i class="fas fa-mobile-alt fa-fw"></i>
+						<input type="tel" name="phone-numerber" id="phone-numerber" value="" placeholder="nhập số điện thoại" required>
+						<div class="err-message" id="err-phone-numerber">Tên đăng nhập không đúng!</div>
+					</div>	
+					<div class="text-box">
+						<div>CMND</div>
+						<i class="fas fa-id-card fa-fw"></i>			
+						<input type="number" name="identity-card" id="identity-card" value="" placeholder="nhập số cmnd" required>
+						<div class="err-message" id="err-identity-card">!</div>				
+					</div>
+					<div class="text-box">
+						<div>Email</div>
+						<i class="fas fa-envelope fa-fw"></i>		
+						<input type="email" name="email" id="email" value="" placeholder="nhập email" required>
+						<div class="err-message" id="err-email">Tên đăng nhập không đúng!</div>
+					</div>	
+					<div class="text-box">
+						<div>Địa chỉ</div>
+						<i class="fas fa-map-marker-alt fa-fw"></i>		
+						<input type="text" name="address" id="address" value="" placeholder="nhập địa chỉ" required>
+						<div class="err-message" id="err-address">!</div>
+					</div>
+					<div class="text-box">
+						<div>Giới tính</div>
+						<label for="male">Nam</label>
+						<input type="radio" name="gender" id="male" value="" required>
+						<i class="fas fa-male fa-fw"></i>							
+						<label for="female">Nữ</label>
+						<input type="radio" name="gender" id="female" value="" required>
+						<i class="fas fa-female" fa-fw></i>
+						<div class="err-message" id="err-gender">Tên đăng nhập không đúng!</div>			
+					</div>	
+					<div class="create-account">
+						<button type="button" class="btn back-sign-up-btn" >Quay lại đăng nhập &nbsp;<i class="fas fa-arrow-alt-circle-left"></i> </button>
+					</div>								
+				</div>
+				<div class="right-box">	
+					<div class="create-account">
+						<div class="image-box">
+							<i class="fas fa-user-circle fa-7x"></i>
+						</div>
+					</div>										
+					<div class="text-box">
+						<div>Tên tài khoản</div>
+						<i class="fas fa-user"></i>			
+						<input type="text" name="account" id="account" value="" placeholder="nhập tên tài khoản" required >
+						<div class="err-message" id="err-account">!</div>				
+					</div>
+					<div class="text-box">
+						<div>Mật khẩu</div>
+						<i class="fas fa-key"></i>		
+						<input type="password" name="password" id="password-up" value="" placeholder="nhập mật khẩu" required >
+						<div class="err-message" id="err-password-up">Tên đăng nhập không đúng!</div>
+					</div>	
+					<div class="text-box">
+						<div>Xác nhận mật khẩu</div>
+						<i class="fas fa-key"></i>
+						<input type="password" name="password" id="password-confirm" value="" placeholder="nhập lại mật khẩu" required >
+						<div class="err-message" id="err-password-confirm">!</div>
+					</div>									
+					<div class="create-account">
+						<button type="submit" class="btn sign-up-btn" >Tạo tài khoản</button>
+						<p><a href="#"><u><i>Điều khoản và quy định tạo tài khoản </i></u></a></p>
+
+						<div class="image-box">
+							<i class="fab fa-sketch fa-8x"></i>
+						</div>								
+					</div>
+				</div>
+			</div>
 		</form>				
 	</div>
 	<script src="javascript/javascript.js"></script>

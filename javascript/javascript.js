@@ -30,13 +30,14 @@ function changeIcon(e) { //e là thẻ
 		//Gán lại tên cũ cho class emty-heart
 		tim_trang_class.className="far fa-heart fa-lg";		
 	}	
-	
+	//đếm số lượng yêu thích
 	$(document).ready(function() {
 		$(".view b").text(function() {
 			return " ("+counterHeart+")";
 		});
 	});
 }
+//đếm số lượng sản phẩm
 	var counterCard = 0; 	
 $(document).ready(function() {
 	$(".card").each(function() {
@@ -276,3 +277,17 @@ function activeColorList() {
 	});
 }
 activeColorList();
+
+// Đăng ký và đăng nhập
+$(document).ready(function() {
+	$(".sign-up-btn-now").click(function() {
+		$(".sign-in-box").hide();
+		$(".sign-up-box").fadeIn(1000).show();
+	});
+});
+$(document).ready(function() {
+	$(".back-sign-up-btn").click(function() {
+		$(".sign-up-box").hide();
+		$(".sign-in-box").fadeIn(1000).show();
+	});
+});
