@@ -273,7 +273,7 @@
 }
 
 .navbar-nav .nav-link:hover{
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid #c0c0c0;
 }
 
 #collapsibleNavbar {
@@ -289,11 +289,11 @@
     transition: width .2s ease-out;
     z-index: -1;
     width: 3px;
-    background-color: #4c366d!important;
+    background-color: #17a2b8!important;
 }
 #collapsibleNavbar li:hover:before {
     width: 100%;
-    background-color: #4c366d!important;
+    background-color: #17a2b8!important;
 }
 
 .img-logo {
@@ -343,7 +343,7 @@
 }
 .rank1-li-menu {
     position: relative;
-    width: 125px;
+    width: 121px;
 }
 
 /*chỉnh absolute cho div rank2-menu theo rank1-li-menu bên trên (chú ý****)*/
@@ -351,12 +351,13 @@
     display: none;
     position: absolute;
     width: 100px;
-    height: 140px;
+    height: 146px;
+    z-index: 1;
 }
 
 .rank1-li-menu:hover .rank2-menu {
     display: block;
-    left: 125px;
+    left: 121px;
     top:8px;
     background: #343a407d;  
 }
