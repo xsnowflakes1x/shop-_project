@@ -267,34 +267,6 @@
 /*chinh màu cho background*/
 
 /*menu*/
-.navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 1)!important;
-    border-bottom: 2px solid transparent;
-}
-
-.navbar-nav .nav-link:hover{
-    border-bottom: 2px solid #c0c0c0;
-}
-
-#collapsibleNavbar {
-    position: relative;
-    z-index: 1;
-}
-#collapsibleNavbar li:before {
-    content: '';
-    height: 100%;
-    position: absolute;
-    top:0;
-    left: 0;
-    transition: width .2s ease-out;
-    z-index: -1;
-    width: 3px;
-    background-color: #17a2b8!important;
-}
-#collapsibleNavbar li:hover:before {
-    width: 100%;
-    background-color: #17a2b8!important;
-}
 
 .img-logo {
     background-color: rgb(255, 193, 7);
@@ -323,7 +295,38 @@
 .top-header-row {
     background-color: #f8f9fa;
 }
+
+
 /*Begin chỉnh menu*/
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 1)!important;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar-nav .nav-link:hover{
+    border-bottom: 2px solid #c0c0c0;
+    color:black!important;
+}
+
+#collapsibleNavbar {
+    position: relative;
+    z-index: 1;
+}
+#collapsibleNavbar li:before {
+    content: '';
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    transition: width .2s ease-out;
+    z-index: -1;
+    width: 3px;
+    background-color: #17a2b8!important;
+}
+#collapsibleNavbar li:hover:before {
+    width: 100%;
+    background-color: #17a2b8!important;
+}
 
 .parent-li-menu {
     position: relative;
@@ -371,7 +374,7 @@
     position: absolute;
     display: none;
     width: 100px;
-    height: 140px;
+    height: 146px;
 }
 .rank2-li-menu {
     width: 100px;
