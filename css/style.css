@@ -16,6 +16,7 @@
 /*.rank1-ul-menu {
     z-index: 9999;    
     }*/
+
     .right-section {
         box-sizing: border-box;
         /*   height: 157px;*/
@@ -99,14 +100,90 @@
         /*End hover icon*/
         /*End thêm hình cho phần right-section flexbox header*/
 
-
-
         /*Chỉnh link*/
+        /*tạo chuông*/
+        a.aBell {
+        outline: none;
+        border-radius: 50%;
+        background: #9d1c21;
+        color: #fff;
+        font-size: 22px;
+        display: block;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        top: auto;
+        margin-left: -25px;
+        transition: transform 0.25s;
+        height: 32px;
+        width: 33px;
+        text-align: center;
+        animation: pulse 1s ease-out 5s infinite;
+        }   
+
+        @keyframes pulse {
+            from {box-shadow:0 0 0 0 rgba(160,160,160,.4)}
+            to {box-shadow:0 0 0 25px rgba(160,160,160,0)}
+        }
+        a.aBell:hover {
+        animation: ring 2s ease infinite;
+        }
+            @keyframes ring {
+        0% {
+            transform: rotate(-15deg)
+        }
+
+        2% {
+            transform: rotate(15deg)
+        }
+
+        4% {
+            transform: rotate(-18deg)
+        }
+
+        6% {
+            transform: rotate(18deg)
+        }
+
+        8% {
+            transform: rotate(-22deg)
+        }
+
+        10% {
+            transform: rotate(22deg)
+        }
+
+        12% {
+            transform: rotate(-18deg)
+        }
+
+        14% {
+            transform: rotate(18deg)
+        }
+
+        16% {
+            transform: rotate(-12deg)
+        }
+
+        18% {
+            transform: rotate(12deg)
+        }
+
+        20%,100% {
+            transform: rotate(0deg)
+        }
+    }        
         a:link {
+            text-decoration: none;
+            transition-duration: .5s;
+         /*   color: black;*/
+        }
+        .bot-flex-containner a:link {
             text-decoration: none;
             transition-duration: .5s;
             color: black;
         }
+
         .right-section a:visited {
             color: black;
         }
@@ -134,36 +211,43 @@
             margin-top:13px;
         }
         .search input[type=text]{
-            transition: width 0.4s ease-in-out;
-            width: 60px;
-            border:2px solid #ffffff;
-            border-radius: 10px;
+            transition: width 0.5s ease-out;
+            width: 120px;
+           /* border:2px solid #17a2b8;*/
+/*            border-radius: 10px;
             border-top-right-radius: 25px;
-            border-bottom-right-radius: 25px;
-            height: 33px;    
+            border-bottom-right-radius: 25px;*/
+            border-left: 8px solid #17a2b8;
+            height: 33px;
+
         }
 
         .search input[type=text]:hover {
-            transition: width 0.4s ease-in-out;
             width: 60px;
-            border:2px solid #17a2b8;
             width: 86%;
+            outline: 2px solid #17a2b8;
+            outline-color: #17a2b8;
+            outline-offset: 2px;
         }
         .search input[type=text]:focus {
-            border:2px solid #17a2b8;
             width: 86%;
+            outline: 2px solid #17a2b8;
+            outline-color: #17a2b8;
+            outline-offset: 2px;
         }
         .search button[type=submit] {
-            border:2px solid #17a2b8;
-            border-radius: 10px;
+            border:3px solid #17a2b8;
             background-color: white;
             border-radius: 50%;
             width: 35px;
-            height: 35px;            
+            height: 35px;     
+            border-top-right-radius: 30px;
+            border-bottom-left-radius: 30px;
         }
         .search button[type=submit]:hover {
             border:2px solid #607d8b;
-            background-color: white;
+            background-color:  #17a2b8;
+            color:white;
         }
 
         /*Begin body*/
@@ -185,6 +269,31 @@
 /*menu*/
 .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 1)!important;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar-nav .nav-link:hover{
+    border-bottom: 2px solid red;
+}
+
+#collapsibleNavbar {
+    position: relative;
+    z-index: 1;
+}
+#collapsibleNavbar li:before {
+    content: '';
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    transition: width .2s ease-out;
+    z-index: -1;
+    width: 3px;
+    background-color: #4c366d!important;
+}
+#collapsibleNavbar li:hover:before {
+    width: 100%;
+    background-color: #4c366d!important;
 }
 
 .img-logo {
@@ -345,6 +454,10 @@
 .card {
     width: 100%;
     position: relative;
+    margin: 10px 0;
+}
+.card:hover {
+    box-shadow: 0 0 11px rgba(0, 50, 255, 0.8);
 }
 .product-img {
     width: 100%;
@@ -545,7 +658,7 @@
     display: flex;
     align-items: center;
     padding: 0 4px;
-    color: #6c757d;    
+    font-size: 14px;
 }    
 /*begin left slideshow galerry*/
 .product-slideshow {
@@ -756,10 +869,9 @@ label.activeSize {
     position: relative;     
 }
 .tab button:hover {
-  background-color: #ffffff;
-
+  background-color: #ffd472;
+    
 }
-
 .tab-content {
     display: none;
 }
@@ -865,10 +977,25 @@ label.activeSize {
     color: #ffe52ef0;
     user-select: none;
 }
-
-
+.reviewer-box > hr{
+    margin-top: 0rem;
+    margin-bottom: 0.5rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+ 
+.comment-box {
+   color:#9c4dd8;
+   cursor: pointer;
+}
+.comment-box:hover {
+   color:#93869d;
+}
 /*Begin css cho Form trang chi tiet san pham*/
 
+.breadcrumb-row .active {
+    color:red;
+}
 
 .quantity .err-message {
     color:red;
@@ -909,6 +1036,9 @@ label.activeSize {
 
 /*begin tranggiohang*/
 
+.bread_crumb2 {
+    margin-top: 20px;
+}
 .header-cart {
     background-color: yellowgreen;
     font-size: 30px;
@@ -1188,7 +1318,7 @@ body, html {
 }
 
 div#background {
-    background-image: url("../image/background/background3.jpg");
+    background-image: url("../image/background/backgroundsneakers5.jpg");
     background-repeat: no-repeat;
     background-position: center;  
     background-size: cover;
@@ -1214,7 +1344,7 @@ div#background {
     top:40%;
     transform:translate(-50%,-50%);
     color: white;
-    background:  #2a342ac9; /*rgba(0, 0, 0, 0.35);*/
+    background:  rgba(0, 0, 0, 0.35); /*#2a342a78; */
 }
 
 .sign-in-box input:focus {
@@ -1273,7 +1403,7 @@ div#background {
     top:50%;
     transform:translate(-50%,-50%);
     color: white;
-    background: #2a342ac9; /*rgba(0, 0, 0, 0.35);*/
+    background: rgba(0, 0, 0, 0.35);
     width: 50%;
     display: none;
 }
@@ -1332,5 +1462,30 @@ div#background {
 .sign-up-box .err-message, .sign-in-box .err-message {
     display: none;
 }
+
+.btn-home {
+    position:fixed;
+    top: 30px;
+    left: -88px;
+    transition: 0.5s;
+}
+
+.btn-home:hover {
+    left: 0;
+}
+
+ .btn-home a {
+    color:black;
+  } 
 /*end trangdangkydangnhap*/
 
+/*begin trang Lien He*/
+#map iframe {
+    height: 500px;
+    width: 100%;
+}
+#map {
+    height: 500px;
+    width: 100%;
+}
+/*end trang Lien He*/
