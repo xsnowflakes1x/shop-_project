@@ -224,7 +224,7 @@
 
         .search input[type=text]:hover {
             width: 60px;
-            width: 86%;
+            width: 90%;
             outline: 2px solid #17a2b8;
             outline-color: #17a2b8;
             outline-offset: 2px;
@@ -243,13 +243,28 @@
             height: 35px;     
             border-top-right-radius: 30px;
             border-bottom-left-radius: 30px;
+            margin-left: 4px;
         }
         .search button[type=submit]:hover {
             border:2px solid #607d8b;
             background-color:  #17a2b8;
             color:white;
         }
-
+        
+        .selection-box {
+            height: 32px;
+            border-left: 8px solid #17a2b8;
+        }
+        .selection-box:hover {
+            outline: 2px solid #17a2b8;
+            outline-color: #17a2b8;
+            outline-offset: 2px;
+        }
+        .selection-box:focus {
+            outline: 2px solid #17a2b8;
+            outline-color: #17a2b8;
+            outline-offset: 2px;
+        }
         /*Begin body*/
         /*chỉnh hình ảnh cho slideshow*/
         .carousel-inner img {
@@ -278,6 +293,7 @@
 }
 .search {
   background-color:#343a40;
+  display: inline-flex;
 }
 
 .title-row {

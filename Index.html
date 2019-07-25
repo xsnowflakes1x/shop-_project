@@ -252,13 +252,17 @@
 					</nav>							
 				</div>
 			</div>
-					<div class="col-sm-12 col-md col-lg">
-						<div class="search search-margin-top">
-							<form class="" action="#">
-							  	<input type="text" placeholder="Search..." name="search">
-							  	<button type="submit"><i class="fa fa-search"></i></button>
-							</form>
-						</div>
+					<div class="col-sm-12 col-md col-lg box-search">
+						<select id=selection class="selection-box">
+							<option value="Tên">Tên</option>
+							<option value="Số lượng">Số lượng</option>
+							<option value="Giá">Giá</option>
+							<option value="Liên quan">Liên quan</option>
+						</select>
+						<form class="search search-margin-top" action="#">
+							<input type="text" placeholder="Search..." name="search">
+							<button type="submit"><i class="fa fa-search"></i></button>
+						</form>
 					</div>
 				</div>				
 			</div>
