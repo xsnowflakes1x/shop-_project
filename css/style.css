@@ -223,14 +223,12 @@
         }
 
         .search input[type=text]:hover {
-            width: 60px;
-            width: 90%;
             outline: 2px solid #17a2b8;
             outline-color: #17a2b8;
             outline-offset: 2px;
         }
         .search input[type=text]:focus {
-            width: 86%;
+            width: 90%;
             outline: 2px solid #17a2b8;
             outline-color: #17a2b8;
             outline-offset: 2px;
@@ -799,8 +797,12 @@ label.activeSize {
  /*chỉnh style cho danh sách màu*/
 
  /*style active cho color*/
+
  .color-list i.fa-check {
     color:#17a022;
+ }
+ .color-list-li:target i.fa-check {
+     color:#c7353b;
  }
 .color-list input[type=radio] {
     display: none;
@@ -1146,7 +1148,32 @@ label.activeSize {
 }  
 .cart-content {     
     display: -webkit-box;
+
 }
+#style-7::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+#style-7::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+#style-7::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear,
+                                       left bottom,
+                                       left top,
+                                       color-stop(0.44, rgb(122,153,217)),
+                                       color-stop(0.72, rgb(73,125,189)),
+                                       color-stop(0.86, rgb(28,58,148)));
+}
+
 .cart-content .product-quantity {
     margin-top: 26%;
     margin-left: 10px;
@@ -1507,5 +1534,25 @@ div#background {
 #map {
     height: 500px;
     width: 100%;
+}
+
+/*Tạo mục lục*/
+
+p:target {
+  transition:4s;  
+  background-color: gold;
+}
+
+/* Add a pseudo-element inside the target element */
+p:target::before {
+  font: 70% sans-serif;
+  content: "►";
+  color: limegreen;
+  margin-right: .25em;
+}
+
+/* Style italic elements within the target element */
+p:target i {
+  color: red;
 }
 /*end trang Lien He*/

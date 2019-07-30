@@ -244,12 +244,16 @@
 						</div>
 					</div>
 					<div class="col-sm-12 col-md col-lg">
-						<div class="search search-margin-top">
-							<form class="" action="#">
-								<input type="text" placeholder="Search..." name="search">
-								<button type="submit"><i class="fa fa-search"></i></button>
-							</form>
-						</div>
+						<select id=selection class="selection-box">
+							<option selected value="Tên">Tên</option>
+							<option value="Số lượng">Số lượng</option>
+							<option value="Giá">Giá</option>
+							<option value="Liên quan">Liên quan</option>
+						</select>
+						<form class="search search-margin-top" action="#">
+							<input type="text" placeholder="Tìm kiếm..." name="search">
+							<button type="submit"><i class="fa fa-search"></i></button>
+						</form>
 					</div>
 				</div>				
 			</div>
@@ -278,6 +282,18 @@
 <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15673.398528504029!2d106.60405255716317!3d10.860989649055938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752a16692f9335%3A0x21a2297c81f63aae!2zSMOgIENoxrDGoW5nLCBUcnVuZyBN4bu5IFTDonksIFF14bqtbiAxMiwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1563113516461!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
 		</div>
 		<h1>My First Google Map</h1>
+<!-- Tạo lục mục		 -->
+			<h3>Mục lục</h3>
+		<ol>
+		 <li><a href="#p1">Jump to the first paragraph!</a></li>
+		 <li><a href="#p2">Jump to the second paragraph!</a></li>
+		</ol>
+
+		<h3>My Fun Article</h3>
+		<p id="p1">You can target <i>this paragraph</i> using a
+		  URL fragment. Click on the link above to try out!</p>
+		<p id="p2">This is <i>another paragraph</i>, also accessible
+		  from the links above. Isn't that delightful?</p>
 
 <script>
 function myMap() {

@@ -260,19 +260,37 @@ function activeSizeList() {
 activeSizeList();
 
 //tạo active cho colorList của trang chi tiết sp
+//cũ - dùnghide():
+// function offColorList() {//duyệt tắt hết check-icon
+// 	$(".color-list li").each(function() { 
+// 	$(".color-list i").hide();
+// 	});
+// }
 
+//Nâng cấp:
 function offColorList() {//duyệt tắt hết check-icon
 	$(".color-list li").each(function() { 
-	$(".color-list i").hide();
-	});
+	$(".color-list i").css({"overflow": "hidden", "width":"0", "height": "0", "opacity": "0", "transition": "opacity 0.5s linear"});
+	});//best-practice
 }
 offColorList();
-function activeColorList() {
 
-	$(".color-list label").click(function(event) {
+//cũ dùng siblings();
+// function activeColorList() {
+// 	$(".color-list label").click(function(event) {
+// 		offColorList();
+// 		var curTarget = $(event.target); //dùng currentTarget cho thẻ label để buddling
+// 		curTarget.siblings().show(); // bật <i class="fas fa-check"></i>
+// 		$("input:radio").hide();	
+// 	});
+// }
+
+//nâng cấp
+function activeColorList() {
+	$(".color-list-li").click(function(event) {
 		offColorList();
 		var curTarget = $(event.currentTarget); //dùng currentTarget cho thẻ label để buddling
-		curTarget.siblings().show();
+		curTarget.children().css({"height": "auto", "width":"auto", "opacity": "1"}).show(); //best-practice
 		$("input:radio").hide();	
 	});
 }
