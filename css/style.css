@@ -1539,10 +1539,13 @@ div#background {
 /*Tạo mục lục*/
 
 p:target {
-  transition:4s;  
+  transition:4s;
   background-color: gold;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 /* Add a pseudo-element inside the target element */
 p:target::before {
   font: 70% sans-serif;
