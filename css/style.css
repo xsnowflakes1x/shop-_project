@@ -415,11 +415,29 @@
     font-size: 18px;
     background: #000000c2;
 }
-.view .box-favorite {
+/*cách làm hover theo opacity*/
+/*.view .box-favorite:before {
+    content:'';
+    position: absolute;
+    top: 0;
     background: radial-gradient(#da0000, transparent);
+    opacity:0;
+    height: 45%;
+    width: 15%;
+    z-index: 1;
+    transition: opacity 1s linear;
 }
-.box-favorite a {
+.view .box-favorite:hover:before {
+    opacity:1;
+
+    background: radial-gradient(#da0000, transparent);
+}*/
+
+.view .box-favorite a {
     color:#e50707e6;
+}
+.view .box-favorite a:hover {
+    background: radial-gradient(#da0000, transparent);
 }
 .summary-product b{
     border: 1.5px solid black;
