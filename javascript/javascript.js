@@ -2,6 +2,7 @@ $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip(); 
 });
 
+
 // hiển thị icon black heart
 var counterHeart = 0;
 function changeIcon(e) { //e là thẻ  
