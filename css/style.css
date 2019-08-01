@@ -471,22 +471,46 @@
     width: 614px;
     left: 315px;
     top: 6px;}
-
+/*trang chủ trang Index*/
     /*sản phẩm*/
+[data-title]:hover:after {
+    opacity: 1;
+    transition: all 1s ease-out;
+    visibility: visible;
+}
+[data-title]:after {
+    content: attr(data-title); //mới (new)
+    color: #111;
+    position: absolute;
+    white-space: nowrap;
+    box-shadow: 1px 1px 3px #222222;
+    opacity: 0;
+    border: 2px solid #ff8192;
+    z-index: 99999;
+    visibility: hidden;
+    font-style: italic;
+/*    border-top: 2px solid #ff8192;
+    border-left: 2px solid #ff8192;
+    border-right: 2px solid #ff8192;*/
+    left: 50%;
+    top: 100%;
+}
+[data-title] {
+    position: relative;
+}    
 .card-img .overlay {
     position: absolute;
     left: 0px;
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.3);
+    background: #edc531;
     color: #f1f1f1;
     width: 35%;
     transition: .4s ease;
     transition-delay: .4s;
     opacity: 0;
-    color: white;
+    color: black;
     text-align: center;
     left: 33%;
-    box-shadow: 0px 3px 3px #7f7979a3;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
 }
 .card-img:hover .overlay {
     opacity: 1;
@@ -526,6 +550,7 @@
 }
 .black-heart-icon {
     display: none;
+    color:#e50707e6;
 }
 
 .brand {
