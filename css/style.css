@@ -406,6 +406,21 @@
 }
 /*End chỉnh menu*/
 /*view*/
+
+.view .badge-favorite {
+    width: 50%;
+    height: 25px;
+    padding-top: 3px;
+    font-weight: 700;
+    font-size: 18px;
+    background: #000000c2;
+}
+.view .box-favorite {
+    background: radial-gradient(#da0000, transparent);
+}
+.box-favorite a {
+    color:#e50707e6;
+}
 .summary-product b{
     border: 1.5px solid black;
     padding: 0px 4px;

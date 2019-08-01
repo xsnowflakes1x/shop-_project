@@ -1,3 +1,7 @@
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(); 
+});
+
 // hiển thị icon black heart
 var counterHeart = 0;
 function changeIcon(e) { //e là thẻ  
@@ -32,8 +36,9 @@ function changeIcon(e) { //e là thẻ
 	}	
 	//đếm số lượng yêu thích
 	$(document).ready(function() {
-		$(".view b").text(function() {
-			return " ("+counterHeart+")";
+		$(".view p").text(function() {
+			// return " ("+counterHeart+")";
+			return counterHeart;
 		});
 	});
 }
@@ -144,7 +149,7 @@ $(document).ready(function() {
 	submitCart()
 });
 function quantity() {
-$(".quantity_class").val("1");
+$(".quantity_class").val("1"); // đặt giá trị mặc định
 $("#cart-quantity").val("1");
 var count = 1;
 //Tạo nút tăng số lượng 
@@ -174,7 +179,7 @@ $(document).ready(function() {
 		}
 		$(".quantity input:text").val(count);
 		checkQuantity();
-		var target = $( event.currentTarget);
+		var target = $(event.currentTarget);
 		totalCart(target);
 	});
 });
