@@ -652,10 +652,9 @@
     opacity: 0.5;
 }
 .snapchat-link:hover {
-    color:  #fede42;
+    color:  rgb(255, 193, 7);
     opacity: 0.5;
 }
-
 
 .payment-container .card1 {
     background: url("../image/CreditCardLogo.png");
@@ -726,10 +725,11 @@
     border: 1px solid;
     height: 33px;
     width: 100px;
-    transition-duration: 1s;
+    transition-duration: .4s;
     text-shadow: 1px 2px 8px;  
     text-align: left;     
     padding-left: 13px;
+    transform: translateY(4px);    
 }
 .email-footer input[type="submit"]:hover {
     border: 1px solid;
@@ -737,7 +737,7 @@
     background-color: #d7d7d7; #3ed4ffbd;
     box-shadow: 0 8px 6px -6px black,0 2px 4px rgba(0,0,0,0.1);;    
     padding-left: 13px;
-    transform: translateY(4px);
+    transform: translateY(8px);
 }
 .about {
     text-align: center;
