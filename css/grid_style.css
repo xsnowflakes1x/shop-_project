@@ -1,4 +1,4 @@
-/*Begin Index CSS grid*/
+Begin Index CSS grid*/
 /*begin header*/
 /*.left-logo {
 	height: 100px;
@@ -120,16 +120,18 @@
 }
 
 /*footer*/
+/*dùng flex*/
 .payment-container {
     display: flex;
     width: 100%;
-    margin-bottom: 20px;
-    justify-content: space-between;
+    margin-bottom: 10px;
+    justify-content: flex-start;
 /*    background: black;*/
 } 
 .payment-item {
     height: 40px;
     width: 85px;
+    margin: 0 10px;
     background-color: #f9acac;
 }
 
@@ -179,4 +181,4 @@
 	height: 38px;
     width: 76px;
     background: black;
-}*/
+}

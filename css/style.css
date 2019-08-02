@@ -581,6 +581,9 @@
 /*end sản phẩm*/
 
 /*footer*/
+.box-jumpbottron {
+    margin-top: 10px;
+}
 .jumbotron-footer-bot {
     border: 2px solid;
     border-radius: 10px;
@@ -595,7 +598,25 @@
 /*.jumbotron-footer-top:hover {
     box-shadow: 6px 10px 6px grey;  
 }*/
-
+.box-link > .col-lg-6 {
+    max-width: 35%;  
+}
+.footer-link > .div1 {
+    padding-left: 13px;
+    font-size: 10px;    
+}
+.footer-link > .div2 {
+    padding-left: 14px;
+    font-size: 10px;
+}
+.footer-link > .div3 {
+    padding-left: 9px;
+    font-size: 10px;
+}
+.footer-link > .div4 {
+    padding-left: 9px;
+    font-size: 10px;
+}
 .footer-link {
     color: black;
     text-decoration: none;
