@@ -281,7 +281,8 @@
 
 /*menu*/
 .left-logo::before {
-    content: 'Hãy đưa một đôi giầy phù hợp cho cô gái, và cô ấy sẽ chinh phục cả thế giới này. – Marilyn Monroe ';
+    content: 'Muốn có giầy chất 👠. Rất dễ! Vừa đẹp nhanh vừa an toàn. Quá đơn giản. ☀😌';
+   /* content: 'Hãy đưa một đôi giầy phù hợp cho cô gái, và cô ấy sẽ chinh phục cả thế giới này. – Marilyn Monroe ';*/
     position: absolute;
     top: 115px;
     left: 28px;
@@ -289,7 +290,7 @@
     font-size: 14px;
     width: 87%;
     z-index: 1;
-    font-family: 'Lobster', cursive;
+    font-family: 'Lobster', cursive;   
 }
 .img-logo {
     background-color: rgb(255, 193, 7);
