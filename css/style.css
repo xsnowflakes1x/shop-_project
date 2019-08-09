@@ -281,7 +281,7 @@
 
 /*menu*/
 .left-logo::before {
-    content: 'Muốn có giầy chất 👠. Rất dễ! Vừa đẹp nhanh vừa an toàn. Quá đơn giản. ☀😌';
+    content: 'Muốn có giầy chất 👠. Rất dễ! Vừa đẹp nhanh vừa an toàn. Ngay tại đây! 😀 📌';
    /* content: 'Hãy đưa một đôi giầy phù hợp cho cô gái, và cô ấy sẽ chinh phục cả thế giới này. – Marilyn Monroe ';*/
     position: absolute;
     top: 115px;
@@ -483,7 +483,26 @@
     left: 315px;
     top: 6px;}
 /*trang chủ trang Index*/
-    /*sản phẩm*/
+/*create video + news*/
+.flex-containner {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.iten-news {
+    background-color: #b9b9b9;
+    width: 500px;
+    height: 100%;
+}
+.item-video {
+    background-color: black;
+    width: 500px;
+    height: 100%;    
+}
+/*sản phẩm*/
+
 [data-title]:hover:after {
     opacity: 1;
     transition: all 1s ease-out;
