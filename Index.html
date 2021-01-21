@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<!-- <html lang="en-US"> -->
+<html lang="vi"></html> <!--for SEO -->
 <head>
 	<meta charset="UTF-8">
 	<!-- thiết lập cho giao diện responsive -->
@@ -245,7 +246,7 @@
 									</ul>
 								</li>
 								<!-- Tạo dropdown -->
-								<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">Nhiều hơn</a>
+								<li class="nav-item dropdown parent-li-menu"><a href="#" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">Nhiều hơn</a>
 									<div class="dropdown-menu">
 										<a class="dropdown-item" href="#">Giày thể thao</a>
 										<a class="dropdown-item" href="#">Giày cao gót</a>
@@ -344,7 +345,7 @@
 				<div class="summary-product"><strong>Số lượng sản phẩm </strong><b>counter</b>&nbsp;<i class="fas fa-pen fa-sm"></i></div> <!-- Tổng số sản phẩm   -->
 			</div>
 			<div class="col col-sm bg-light">
-				<div class="view"><i class="fas fa-glasses fa-lg"></i> <!-- Hiển thị -->
+				<div class="view"><i class="fas fa-glasses fa-lg" data-toggle="tooltip" title="Khung nhin"></i><!-- Hiển thị -->
 					<div class="btn-group"> 
 					  <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
 					  </button>
@@ -858,7 +859,6 @@
 							<input type="hidden" name="xxx" value="113">
 						</form> 							
 					</div>
- 
 				</div>							
 			</div>
 			<div class="jumbotron jumbotron-fluid jumbotron-footer-bot">
@@ -879,7 +879,7 @@
 
 		<!-- end footer -->
 </div>	
-	<script src="javascript/javascript.js"></script>	
+	<script src="javascript/javascript.js" defer></script>	<!--defer ngăn lỗi do html chưa tải xong-->
 </body>
 
 </html>

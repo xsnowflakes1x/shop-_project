@@ -3,8 +3,12 @@
     margin: 0;
     border:0;
     font-weight: 500;
-
 }
+::selection { 
+    background-color:black;
+    color: orange;
+} ; /*pseudo-element tạo màu bôi đen text */
+
 .btn{
     font-weight: 600;
 }
@@ -281,7 +285,7 @@
 
 /*menu*/
 .left-logo::before {
-    content: 'Muốn có giầy chất 👠. Rất dễ! Vừa đẹp nhanh vừa an toàn. Ngay tại đây! 😀 📌';
+    content: 'Giày 👠 chất vừa đẹp vừa xịn xò. Ngay tại đây! 😀 📌';
    /* content: 'Hãy đưa một đôi giầy phù hợp cho cô gái, và cô ấy sẽ chinh phục cả thế giới này. – Marilyn Monroe ';*/
     position: absolute;
     top: 115px;
@@ -343,35 +347,33 @@
     position: absolute;
     top:0;
     left: 0;
-    transition: width .2s ease-out;
+    transition: width .4s ease-out;
     z-index: -1;
     width: 3px;
     background-color: #17a2b8!important;
 }
-#collapsibleNavbar li:hover::before {
+#collapsibleNavbar li.parent-li-menu:hover::before { 
     width: 100%;
-    background-color: #17a2b8!important;
 }
-
+/*Xóa rank2-menu để giải quyết vấn đề*/
 .parent-li-menu {
     position: relative;
 }
 
 .rank1-ul-menu {
     position: absolute;
-    z-index: 1;
     display: none;
-
 }
 .parent-li-menu:hover .rank1-ul-menu  {
     display: block;
     z-index: 9999;
     background: #343a407d;
-
 }
 .rank1-li-menu {
     position: relative;
     width: 121px;
+    background: #343a407d;
+    z-index: 1;
 }
 
 /*chỉnh absolute cho div rank2-menu theo rank1-li-menu bên trên (chú ý****)*/
@@ -387,12 +389,12 @@
     display: block;
     left: 121px;
     top:8px;
-    background: #343a407d;  
+    background: #343a407d;
 }
 .rank2-ul-menu {
     position: absolute;
     top: 20px;
-
+    background-color: #343a407d!important;
 }
 /*Chỉnh menu cấp 3*/
 .rank3-menu {
@@ -408,12 +410,12 @@
     display: block;
     left: 100px;
     top: -20px;
-    background: #343a407d;  
 }
 
 .rank3-ul-menu {
     position: absolute;
     top: 20px;
+    background: #343a407d; 
 }
 /*End chỉnh menu*/
 /*view*/
@@ -490,6 +492,8 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ebebeb;
 }
 .iten-news {
     background-color: #b9b9b9;
@@ -880,7 +884,7 @@
 /*style active cho size*/
 label.activeSize {
     border-color: #ddd;
-    background:#ff070761;
+    background:orange/*#ff070761*/;
 }
 
 .size-list>input[type=radio]{

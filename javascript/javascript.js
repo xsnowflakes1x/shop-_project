@@ -53,7 +53,7 @@ $(document).ready(function() {
 			return counterCard;
 		});
 	});
-});
+})	;
 
  	//kiểm tra Form validation -- số lượng nhập vào (trong trang chi tiết sp)
  	//Cách 1: dùng Javascript
