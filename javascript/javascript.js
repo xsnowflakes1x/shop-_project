@@ -38,7 +38,7 @@ function changeIcon(e) { //e là thẻ
 	}	
 	//đếm số lượng yêu thích
 	$(document).ready(function() {
-		$(".view p").text(function() {
+		$(".view span").text(function() {
 			// return " ("+counterHeart+")";
 			return counterHeart;
 		});
